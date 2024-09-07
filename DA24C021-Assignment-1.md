@@ -213,7 +213,8 @@ Now we will model the key concepts and relationships in order to capture above d
 
 
 
-Design choices
+
+Design choices 
 
 - Use of Transitive roles : The company can have ownership chain say CompnayA can own CompanyB and Company B owns Company C which was captured by transitive role `owns`. Similar transitive role `has` also captures relation like Etf has Stock and Mutual fund can have both Stock and ETFs
 - Concept Disjointness -  TODO
@@ -221,6 +222,8 @@ Design choices
 - Cardinality Restrictions  -  TODO
 - Nominal Axioms (Individual Equality/Disjointness)  -  TODO
 
+Classes
+- Company - A registered business according to laws.
 
 
 Note: Please keep the overall goal of the full set of assignments in mind while designing the ontology. You can plan to have members of the primitive symbols (concepts and relationships) available/ extractable from XML data you would generate later in Assignment 2.
