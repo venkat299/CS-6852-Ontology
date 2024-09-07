@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel/"
+     xml:base="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#hasCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#hasCategory">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Company"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Stock"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Asset -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Asset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#BalanceStatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#BalanceStatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#BalanceStatment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Metric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Banking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Banking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Beta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Beta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#RiskMetric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#CalendarPeriod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#CalendarPeriod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#TimeInterval"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#CalendarQuarter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#CalendarQuarter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#CalendarPeriod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#CalendarYear -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#CalendarYear">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#CalendarPeriod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Category -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Category"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Company -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Company"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#CompanyName -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#CompanyName">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Name"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#StockName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Debt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Debt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Liability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Dividend -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Dividend">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#EquityMetric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Equity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Equity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Liability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#EquityMetric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#EquityMetric">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Metric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#IT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#IT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Income -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Income">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#BalanceStatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Liability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Liability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#BalanceStatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Manufacturing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Manufacturing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Sector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#MarketIndex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#MarketIndex"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Metric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Metric"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Name -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Peers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Peers"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Price -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Price">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#BalanceStatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Profit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Profit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#BalanceStatment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Return -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Return">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#EquityMetric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#RiskMetric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#RiskMetric">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Metric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Sector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Sector"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#SharpeRatio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#SharpeRatio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#RiskMetric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Stock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Stock"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#StockName -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#StockName">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Name"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#TemporalEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#TemporalEntity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#TimeInterval -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#TimeInterval">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#TemporalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Volatility -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Volatility">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#RiskMetric"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Banking"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#IT"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sushmapanchadi/ontologies/2024/8/finmodel#Manufacturing"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
