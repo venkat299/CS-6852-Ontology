@@ -32,7 +32,7 @@ Developing ontological model will help in framing questions related to equity re
 
   An Equity has following properties/relation :
 
-  - Name  (eg. APPL, SBI)
+  - ~~Name  (eg. APPL, SBI)~~
   - Company  (eg. Apple Inc, State Bank of India) - equity belongs to a company
   - Equity metrics
   - Risk metrics
@@ -57,6 +57,7 @@ Developing ontological model will help in framing questions related to equity re
     - Current : Measures solvency
     - Quick : Measures liquidity
     - Debt-to-Worth : Measures financial risk
+    - MarketValuation : MarketCapitalization+Debt
   - **Efficiency Ratios**
     - Sales-To-Assets : Measures the efficiency of Total Assets in generating sales
     - Return On Assets : Measures the efficiency of Total Assets in generating Net Profit
@@ -65,7 +66,7 @@ Developing ontological model will help in framing questions related to equity re
 - **Market structure**
 
   - Category (eg. SmallCap, MidCap, LargeCap, etc)
-  - MarketIndex : Index/Equity to which the stock is benchmarked against
+  - MarketIndex : Index/Equity to which the stock is benchmarked against (Nifty, BankNifty)
   - Sector : market classification of stock (Banking , IT , Manafacturing)
   - Stage : Lifecycle stage at which company is in (DevelopmentStage, GrowthStage, SustainabilityStage, ExpansionStage)
 
@@ -74,11 +75,13 @@ Developing ontological model will help in framing questions related to equity re
   - Year (FY2022, FY2023 etc )
   - Quarter (Q2023-1, Q2023-2, Q2023-3, .....)
 
-- **Portfolio** - collection of equity
+- **Stock Screener** - collection of equity
 
   - Growth
-  - Value
-  - Balanced
+  - ~~Balanced~~
+  - LowVolatile
+  - HighGrowth - Stocks with low pe and high  profit growth 
+  - Oversold - Stocks with RSI (Relative Strength Index) < 30
 
 
 
@@ -89,15 +92,15 @@ Now we will model the key concepts and relationships in order to capture above d
 #### Classes and Subclasses (Concept Inclusions -Subsumption Axiom)
 
 - Company
-  - HoldingCompany
-
-- Name
-  - CompanyName
-  - StockName
-- Category 
+  - ~~HoldingCompany~~ This is a derived class should be removed and DL expression should be added
+- ~~Name~~
+  - ~~CompanyName~~
+  - ~~StockName~~
+- ~~Category~~ 
 - BusinessStage 
 - Sector 
-- MarketIndex (Nifty, BankNifty)
+- MarketIndex 
+- StockScreener
 - Instrument
   - Stock 
   - Etf
@@ -117,49 +120,53 @@ Now we will model the key concepts and relationships in order to capture above d
     - Beta
     - Volatility  (Volatility ⊑ RiskMetric)
     - Sharpe ratio
+  - BalanceStatement
+    - Profit
+    - ProfitGrowth
+    - ~~Price~~
+    - Income
+    - Asset
+    - Liability
+    - MarketValuation
 
-  - MonetaryAmount
 
-    - BalanceStatement
-      - Profit
-      - Price
-      - Income
-      - Asset
-      - Liability
+#### Roles and its properties 
 
+- **owns** : A company can own other company
+  - owns$⊆$Company$×$Company
+  - `Trans` (`owns`), (Transitive : If Company A owns Company B and  Company B owns Company C then Company A owns Company B)
+  - `Irref` (`owns`),  (Irrefrexive : No company can own itself)
+  - `Asym` (`owns`),  (Asymmetric : If Company  A owns company B then Company B cannot own Company A)
+  - `isOwnedBy`$≡$`owns`, (Inverse relation , If A owns B then B is owned by A) 
+- **has** $\sube$ (Instrument $\times$ Instrument) A instrument can be part of other instrument
+  - Transitive, Irrefrexive, Asymmetric
+- **hasPeer** $\sube$ (Company$\times$ Company)
+  - Transitive, Irreflexive
 
-#### Some of the Relationships 
-
-- Transitive Roles
-  - owns : (Company$\to$Company) A company can own other company
-  - has: (Instrument $\to$ Instrument) A instrument can be part of other instrument
-  - hasPeer: (Company$\to$ Company)
-
-- isInStage: (Company$\to$ BusinessStage)
-- belongsTo: (Company$\to$ Sector), 
-- benchmarkedBy: ( Instrument$\to$MarketIndex)
-- isIn: (Stock$\to$Portfolio)
-- holds: (Portfolio$\to$Stock)
+- **isIn**: (Company$\to$ BusinessStage)
+- **isInSector**: (Company$\to$ Sector), 
+- **benchmarkedBy**: ( Instrument$\to$MarketIndex)
+- isPartOf: (Stock$\to$StockScreener)
+- hasStock: (Stock Screener$\to$Stock)
 - hasPrice : (Stock$\to$ Price)
 - hasReturn : (Stock$\to$ Return)
 - hasDividend : (Stock$\to$ Dividend)
 - hasMarketCapitalization : (Stock $\to$ MarketCapitalization)
+- hasMarketValuation : (Stock $\to$ MarketValuation)
 - observedIn : (Metric$\to$ TimePeriod)
 - hasProfit : (Profit $\to$ Company)
-- hasDividend : (Profit $\to$ Company)
 - observedIn : (MonetaryAmount$\to$ TimePeriod)
-- hasValue :  (Metric$\to$ NumericValue)
 
 #### Axioms
 
-- Company, Stock has always a unique name
+- ~~Company, Stock has always a unique name~~
 
-  > Company $⊑ (=1$ hasName.Name$)$
-  > Stock	 $⊑ (=1$ hasName.Name$)$ 
+  > ~~Company $⊑ (=1$ hasName.Name$)$~~
+  > ~~Stock	 $⊑ (=1$ hasName.Name$)$~~ 
 
-- CompanyName and StockName are disjoint
+- ~~CompanyName and StockName are disjoint~~
 
-  > CompanyName $⊓$ StockName $⊑ ⊥$
+  > ~~CompanyName $⊓$ StockName $⊑ ⊥$~~
 
 - Company is part of a sector
 
@@ -181,7 +188,6 @@ Now we will model the key concepts and relationships in order to capture above d
 
   > Portfolio $⊑ ∃$holds.Stock
   
-
 - A stock must have a price, return, and volatility:
 
   > Stock $⊑ ∃$hasPrice.Price $⊓ ∃$hasReturn.Return $⊓ ∃$hasVolatility.Volatility
@@ -206,13 +212,39 @@ Now we will model the key concepts and relationships in order to capture above d
 
   > Largecap $⊑$  Stock ⊓ (hasMarketCapitalization > 20000)
 
-- Balanced portfolios cannot hold more than 30% of equities from the same sector:
+- ~~Balanced portfolios cannot hold more than 30% of equities from the same sector:~~
 
-  > BalancedPortfolio $⊑ ∃$ holds.(Stock $⊓$ (hasVolatility $≥$ 0.3)) $⊓$ ($\ge3$ holds.Stock)
+  > ~~BalancedPortfolio $⊑ ∃$ holds.(Stock $⊓$ (hasVolatility $≥$ 0.3)) $⊓$ ($\ge3$ holds.Stock)~~
 
 - LowVolatile portfolios holds more than 3 equities each having volatility lesser than 0.3:
 
   > LowVolatile $⊑ ∃$ holds.(Equity $⊓$ (hasVolatility $<$ 0.3)) $⊓$ ($\ge3$ holds.Stock)
+
+#### Role Constraints
+
+To model the restrictions on ownership, we apply constraints to the `owns` property.
+
+#### a) **Irreflexivity**:
+
+No company can own itself. In DL, we express irreflexivity for the `owns` role like this:
+
+Irref (`owns`)
+
+#### b) **Asymmetry**:
+
+If a company xxx owns another company yyy, then yyy cannot own xxx. This prevents reciprocal ownership. We define asymmetry as:
+
+Asym(`owns`)
+
+#### c) **Transitivity** (Optional):
+
+If ownership should propagate through chains (e.g., xxx owns yyy, and yyy owns zzz, then xxx indirectly owns zzz), you can define the `owns` role as transitive:
+
+Trans(`owns`)
+
+![image-20240910161541025](./image-20240910161541025.png)
+
+![image-20240910162305913](./image-20240910162305913.png)
 
 ### Task - 3 : a write-up about the design choices made and the details of the design - the explanations for classes, properties, DL axioms, motivating situations/examples - of terms in the ontology. 
 
@@ -280,7 +312,6 @@ Design choices
   - (Company $⊑∃$belongsTo.Sector) A company will definitely belong to a sector but (Sector $⊑∀$has.Company) a sector can have 0 or many companies.
 
 
-Note: Please keep the overall goal of the full set of assignments in mind while designing the ontology. You can plan to have members of the primitive symbols (concepts and relationships) available/ extractable from XML data you would generate later in Assignment 2.
 
 
 
