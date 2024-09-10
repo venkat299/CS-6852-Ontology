@@ -11,7 +11,7 @@ The domain of interest is **Financial Modeling**. The goal is to develop a basic
 
 Developing ontological model will help in framing questions related to equity research in a systematic and concise manner. For example some sample questions are listed below
 
-- Which Stocks are in GrowthStage has high return in last quarter?
+- Which Stocks are in GrowthStage and has high return in last quarter?
 - Which Banking stock gave most return in year YYYY?
 - Current year Stock price > Last year stock price?
 - List stocks that are eligible to be in X portfolio?
@@ -32,13 +32,12 @@ Developing ontological model will help in framing questions related to equity re
 
   An Equity has following properties/relation :
 
-  - ~~Name  (eg. APPL, SBI)~~
   - Company  (eg. Apple Inc, State Bank of India) - equity belongs to a company
   - Equity metrics
   - Risk metrics
   - Balance sheet metrics
   - Peers : Companies which are operating in same sectors or industry
-
+  
 - **Equity Metric**
 
   - Price : price of a stock
@@ -75,10 +74,8 @@ Developing ontological model will help in framing questions related to equity re
   - Year (FY2022, FY2023 etc )
   - Quarter (Q2023-1, Q2023-2, Q2023-3, .....)
 
-- **Stock Screener** - collection of equity
+- **StockScreener** - collection of equity
 
-  - Growth
-  - ~~Balanced~~
   - LowVolatile
   - HighGrowth - Stocks with low pe and high  profit growth 
   - Oversold - Stocks with RSI (Relative Strength Index) < 30
@@ -91,16 +88,8 @@ Now we will model the key concepts and relationships in order to capture above d
 
 #### Classes and Subclasses (Concept Inclusions -Subsumption Axiom)
 
-- Company
-  - ~~HoldingCompany~~ This is a derived class should be removed and DL expression should be added
-- ~~Name~~
-  - ~~CompanyName~~
-  - ~~StockName~~
-- ~~Category~~ 
-- BusinessStage 
-- Sector 
-- MarketIndex 
-- StockScreener
+![class1](./class1.png)
+
 - Instrument
   - Stock 
   - Etf
@@ -110,12 +99,18 @@ Now we will model the key concepts and relationships in order to capture above d
   - TimeInterval
     - CalendarPeriod
       - CalendarYear 
-      - CalendarQuarter 
+      - CalendarQuarter
+
+![class2](./class2.png)
+
 - Metric
   - EquityMetric
     - Return 
     - Dividend
     - MarketCapitalization
+    - PE
+    - RSI
+    - Price
   - RiskMetric
     - Beta
     - Volatility  (Volatility ⊑ RiskMetric)
@@ -123,141 +118,153 @@ Now we will model the key concepts and relationships in order to capture above d
   - BalanceStatement
     - Profit
     - ProfitGrowth
-    - ~~Price~~
     - Income
     - Asset
     - Liability
     - MarketValuation
 
+  
+
+  - Company
+  - BusinessStage 
+  - Sector 
+  - MarketIndex 
+  - Portfolio (aka. StockScreener)
 
 #### Roles and its properties 
+
+![role](./role.png)
 
 - **owns** : A company can own other company
   - owns$⊆$Company$×$Company
   - `Trans` (`owns`), (Transitive : If Company A owns Company B and  Company B owns Company C then Company A owns Company B)
-  - `Irref` (`owns`),  (Irrefrexive : No company can own itself)
+  - `Irref` (`owns`),  (Irreflexive : No company can own itself)
   - `Asym` (`owns`),  (Asymmetric : If Company  A owns company B then Company B cannot own Company A)
-  - `isOwnedBy`$≡$`owns`, (Inverse relation , If A owns B then B is owned by A) 
+  - `isOwnedBy`$≡$`owns`$^{-1}$, (Inverse relation , If A owns B then B is owned by A) 
 - **has** $\sube$ (Instrument $\times$ Instrument) A instrument can be part of other instrument
-  - Transitive, Irrefrexive, Asymmetric
+  - Transitive : `Trans` (`has`)
+  - Irreflexive : `Irref` (`has`)
+  - Asymmetric : `Asym` (`has`)
 - **hasPeer** $\sube$ (Company$\times$ Company)
-  - Transitive, Irreflexive
+  - Transitive : `Trans` (`hasPeer`)
+  - Reflexive :  : `Ref` (`hasPeer`)
 
 - **isIn**: (Company$\to$ BusinessStage)
 - **isInSector**: (Company$\to$ Sector), 
+- **contains**: (Sector$\to$ Company), 
 - **benchmarkedBy**: ( Instrument$\to$MarketIndex)
-- isPartOf: (Stock$\to$StockScreener)
-- hasStock: (Stock Screener$\to$Stock)
-- hasPrice : (Stock$\to$ Price)
-- hasReturn : (Stock$\to$ Return)
-- hasDividend : (Stock$\to$ Dividend)
-- hasMarketCapitalization : (Stock $\to$ MarketCapitalization)
-- hasMarketValuation : (Stock $\to$ MarketValuation)
-- observedIn : (Metric$\to$ TimePeriod)
-- hasProfit : (Profit $\to$ Company)
-- observedIn : (MonetaryAmount$\to$ TimePeriod)
+- **isInScreener**: (Stock$\to$StockScreener)
+- **hasStock**: (Stock Screener$\to$Stock)
+- **hasPrice** : (Stock$\to$ Price)
+- **hasReturn** : (Stock$\to$ Return)
+- **hasVolatility** : (Stock$\to$ Return)
+- **hasMarketCapitalization** : (Stock$\to$ Return)
+- **hasMarketValuation** : (Stock$\to$ Return)
+- **hasEquityMetric**:(Stock$\to$ EquityMetric)
+- **hasRiskMetric**:(Stock$\to$ RiskMetric)
+- **hasBalanceSheetMetric**:(Company$\to$ EquityMetric)
+
+![role2](./role2.png)
+
+- **observedIn** : (Metric$\to$ TimePeriod)
 
 #### Axioms
 
-- ~~Company, Stock has always a unique name~~
+- Company should be a part of some sector
 
-  > ~~Company $⊑ (=1$ hasName.Name$)$~~
-  > ~~Stock	 $⊑ (=1$ hasName.Name$)$~~ 
+  > Company $⊑∃$ isInSector.Sector
 
-- ~~CompanyName and StockName are disjoint~~
+- Company must be in some type of business lifecycle stage
 
-  > ~~CompanyName $⊓$ StockName $⊑ ⊥$~~
+  > Company $⊑ \ =1$ isInStage.BusinessStage
 
-- Company is part of a sector
+- Holding company is a company which owns another company
 
-  > Company $⊑∃$belongsTo.Sector
-
-  > Sector $⊑∀$has.Company
-
-- Company must be in some growth stage
-
-  > Company $⊑ ∃$isInStage.BusinessStage
+> HoldingCompany$≡$Company$⊓∃$owns.Company
 
 - Heirarchial role of Instruments
 
-  - Etf $⊑ ∃$has.Stock
-  - MutualFund $⊑ ∃$has.Stock $⊔$ $∃$has.ETF
-  - FundofFund $⊑∃$has.ETF $⊔$ $∃$has.MutualFund
+  - Etf $⊑ ∃$ has.Stock
+  - MutualFund $⊑ ∃$ has.Stock $⊔$ $∃$ has.ETF
+  - FundofFund $⊑∃$ has.ETF $⊔$ $∃$ has.MutualFund
 
 - Portfolio holds at least one stock:
 
-  > Portfolio $⊑ ∃$holds.Stock
-  
+  > Portfolio $⊑ ∃$ holds.Stock
+
 - A stock must have a price, return, and volatility:
 
-  > Stock $⊑ ∃$hasPrice.Price $⊓ ∃$hasReturn.Return $⊓ ∃$hasVolatility.Volatility
+  > Stock $⊑ ∃$ hasPrice.Price $⊓ ∃$ hasReturn.Return $⊓ ∃$ hasVolatility.Volatility
 
 - Price, return, and volatility are observed in specific time periods:
 
-  > Price $⊑ ∃$observedIn.TimeInterval
+  > Price $⊑ ∃$ observedIn.TimeInterval
 
-  > Return $⊑ ∃$observedIn.TimeInterval
+  > Return $⊑ ∃$ observedIn.TimeInterval
 
-  > Volatility $⊑ ∃$observedIn.TimeInterval
+  > Volatility $⊑ ∃$ observedIn.TimeInterval
 
-- Midcap : companies with a moderate market capitalisation ranging from Rs. 5,000 crores to Rs. 20,000 crores
+- Midcap : companies with a moderate market valuation ranging from Rs. 5,000 crores to Rs. 20,000 crores
 
-  > Midcap $⊑$  Stock ⊓ (hasMarketCapitalization ≥ 5000) ⊓ (hasMarketCapitalization ≤ 20000)
+  > Midcap $⊑$  Stock ⊓ (hasMarketValuation ≥ 5000) ⊓ (hasMarketValuation ≤ 20000)
 
 - Smallcap : company whose market capitalization is less than Rs 5,000 crores are known as small-cap companie
 
-  > Smallcap $⊑$  Stock ⊓ (hasMarketCapitalization < 5000)
+  > Smallcap $⊑$  Stock ⊓ (hasMarketValuation < 5000)
 
 - Largecap : company with market caps of ₹20,000 crore or more
 
-  > Largecap $⊑$  Stock ⊓ (hasMarketCapitalization > 20000)
+  > Largecap $⊑$  Stock ⊓ (hasMarketValuation > 20000)
 
-- ~~Balanced portfolios cannot hold more than 30% of equities from the same sector:~~
+- LowVolatile stocks have volatility lesser than 0.3:
 
-  > ~~BalancedPortfolio $⊑ ∃$ holds.(Stock $⊓$ (hasVolatility $≥$ 0.3)) $⊓$ ($\ge3$ holds.Stock)~~
+  > LowVolatileStocks $⊑$ Stock $⊓$ (hasVolatility $<$ 0.3)
 
-- LowVolatile portfolios holds more than 3 equities each having volatility lesser than 0.3:
+- LowVolatile portfolio holds more than 3 equities each having volatility lesser than 0.3:
 
-  > LowVolatile $⊑ ∃$ holds.(Equity $⊓$ (hasVolatility $<$ 0.3)) $⊓$ ($\ge3$ holds.Stock)
+  > LowVolatile $⊑ ∃$ hasStock.(LowVolatileStocks)) $⊓$ ($\ge3$ hasStock)]
 
-#### Role Constraints
+- HighGrowth - Stocks with low pe(<10) and high  profit growth (>40%)
 
-To model the restrictions on ownership, we apply constraints to the `owns` property.
+> HighGrowthStocks $⊑$ Stock $⊓$ (hasPE.PE $<$ 10 $⊓$ hasProfitGrowth.ProfitGrowth>40)
 
-#### a) **Irreflexivity**:
+* HighGrowth portfolio holds more than 3HighGrowthStocks equities
 
-No company can own itself. In DL, we express irreflexivity for the `owns` role like this:
+> HighGrowth $⊑ ∃$ hasStock.(HighGrowthStocks) $⊓$ ($\ge3$ hasStock.Stock)]
 
-Irref (`owns`)
+- Oversold - Stocks with RSI (Relative Strength Index) < 30
 
-#### b) **Asymmetry**:
+> OversoldStocks $⊑$ Stock $⊓$ (hasRSI.RSI $<30$)
 
-If a company xxx owns another company yyy, then yyy cannot own xxx. This prevents reciprocal ownership. We define asymmetry as:
+* Company, Stock has always a unique name
 
-Asym(`owns`)
+  > Company $⊑ (=1$ hasName.Name$)$
+  > Stock  $⊑ (=1$ hasName.Name$)$ 
 
-#### c) **Transitivity** (Optional):
+- CompanyName and StockName are disjoint
 
-If ownership should propagate through chains (e.g., xxx owns yyy, and yyy owns zzz, then xxx indirectly owns zzz), you can define the `owns` role as transitive:
+  > CompanyName $⊓$ StockName $⊑ ⊥$
 
-Trans(`owns`)
 
-![image-20240910161541025](./image-20240910161541025.png)
-
-![image-20240910162305913](./image-20240910162305913.png)
 
 ### Task - 3 : a write-up about the design choices made and the details of the design - the explanations for classes, properties, DL axioms, motivating situations/examples - of terms in the ontology. 
 
 
 Classes
-- Company - A registered business according to laws.
-- CompanyName - Represents the name of the company
-- StockName - Represents the name of the stock of the company
+- Company - A registered business according to laws.  
+
+- CompanyName - Represents the name of the company. This Class was omitted in the final design as it can be modelled as datatype
+
+- StockName - Represents the name of the stock of the company. This Class was omitted in the final design as it can be modelled as datatype
   
-- Category - Classification of financial instruments based on characteristics like market capitalization (e.g., SmallCap, MidCap, LargeCap).
+- Category - Classification of financial instruments based on characteristics like market capitalization (e.g., SmallCap, MidCap, LargeCap).  This Class was omitted in the final design as its subclasses can be modelled as an expression
+
 - BusinessStage - Represents the lifecycle stage of a company, such as DevelopmentStage, GrowthStage, SustainabilityStage, ExpansionStage.
+
 - Sector - Represents the industry sector to which a company belongs, such as Technology, Finance, or Healthcare.
-- MarketIndex - A statistical measure representing the performance of a segment of the stock market. Eg. NIFTY, BankNifty
+
+- MarketIndex - A measure representing the performance of a segment of the stock market. Eg. NIFTY, BankNifty
+
 - Instrument 
   - Stock - Represents an equity that signifies ownership in a company.
   - ETF - An exchange-traded fund that holds a collection of stocks or other assets and is traded on an exchange.
@@ -269,6 +276,7 @@ Classes
     - CalenderPeriod -
       - CalenderYear - Represents a full year.
       - CalenderQuarter - Represents a quarter of a year.
+    
 - Metric
   - EquityMetric -  Measures specific attributes of equity investments.
     - Return - The profit or loss from an instrument.
@@ -278,7 +286,7 @@ Classes
     - Beta - A measure of an investment’s volatility relative to the market.
     - Volatility - The degree of variation of a trading stock price over time.
     - Sharpe ratio - A measure of risk-adjusted return, comparing the return of an investment to its risk.
-- MonetaryAmount 
+  
   - BalanceStatement - Represents financial metrics
     - Profit - The net income of a company after expenses.
     - Price - The current trading value of instrument.
@@ -309,7 +317,7 @@ Design choices
 - Use of Transitive roles : The company can have ownership chain say Company A can own Company B and Company B owns Company C which was captured by transitive role `owns`. Similar transitive role `has` also captures relation like Etf has Stock and Mutual fund can have both Stock and ETFs.
 - Concept Disjointness : The company and stock name should be disjoint to represent different entities. Stock is a financial instrument representing the company's business.
 - Inverse Role :
-  - (Company $⊑∃$belongsTo.Sector) A company will definitely belong to a sector but (Sector $⊑∀$has.Company) a sector can have 0 or many companies.
+  - (Company $⊑∃$isInSector.Sector) A company will definitely belong to a sector but (Sector $⊑∀$has.Company) a sector can have 0 or many companies.
 
 
 
