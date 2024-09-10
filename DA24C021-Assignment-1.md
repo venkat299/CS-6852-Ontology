@@ -1,6 +1,20 @@
+Submission By
+
+DA24C021 - Venkatesh Duraiarasan
+
+CS24M033 - Pradeep Peter Murmu
+
+CS24M036 - Raju Guguloth
+
 # Assignment 1: Ontology Design
 
-## Task - 1: A plain text description of the domain of interest and a list of concrete pieces of knowledge you would like to capture in the domain. 
+[TOC]
+
+
+
+## Task - 1
+
+## A plain text description of the domain of interest and a list of concrete pieces of knowledge you would like to capture in the domain. 
 
 
 The domain of interest is **Financial Modeling**. The goal is to develop a basic ontology model which aids 
@@ -82,7 +96,9 @@ Developing ontological model will help in framing questions related to equity re
 
 
 
-## Task - 2 : the DL ontology (TBox) 
+## Task - 2
+
+##  the DL ontology (TBox) 
 
 Now we will model the key concepts and relationships in order to capture above domain knowledge
 
@@ -95,15 +111,27 @@ Now we will model the key concepts and relationships in order to capture above d
   - Etf
   - MutualFund
   - FundofFund
+
 - [TemporalEntity](https://spec.edmcouncil.org/fibo/ontology?query=https://www.omg.org/spec/Commons/DatesAndTimes/TemporalEntity) (referred from FIBO)
+
   - TimeInterval
     - CalendarPeriod
       - CalendarYear 
       - CalendarQuarter
 
-![class2](./class2.png)
+  
 
-- Metric
+  - Company
+  - BusinessStage 
+  - Sector 
+  - MarketIndex 
+  - Portfolio (aka. StockScreener)
+
+
+
+#### DataProperties
+
+- Metric (xsd:float)
   - EquityMetric
     - Return 
     - Dividend
@@ -113,7 +141,7 @@ Now we will model the key concepts and relationships in order to capture above d
     - Price
   - RiskMetric
     - Beta
-    - Volatility  (Volatility ⊑ RiskMetric)
+    - Volatility 
     - Sharpe ratio
   - BalanceStatement
     - Profit
@@ -123,13 +151,7 @@ Now we will model the key concepts and relationships in order to capture above d
     - Liability
     - MarketValuation
 
-  
-
-  - Company
-  - BusinessStage 
-  - Sector 
-  - MarketIndex 
-  - Portfolio (aka. StockScreener)
+  ![class2](./class2.png)
 
 #### Roles and its properties 
 
@@ -206,27 +228,27 @@ Now we will model the key concepts and relationships in order to capture above d
 
 - Midcap : companies with a moderate market valuation ranging from Rs. 5,000 crores to Rs. 20,000 crores
 
-  > Midcap $⊑$  Stock ⊓ (hasMarketValuation ≥ 5000) ⊓ (hasMarketValuation ≤ 20000)
+  > Midcap $⊑$  Stock ⊓ (hasMarketValuation.( ≥ 5000)) ⊓ (hasMarketValuation.( ≤ 20000))
 
 - Smallcap : company whose market capitalization is less than Rs 5,000 crores are known as small-cap companie
 
-  > Smallcap $⊑$  Stock ⊓ (hasMarketValuation < 5000)
+  > Smallcap $⊑$  Stock ⊓ (hasMarketValuation.( < 5000))
 
 - Largecap : company with market caps of ₹20,000 crore or more
 
-  > Largecap $⊑$  Stock ⊓ (hasMarketValuation > 20000)
+  > Largecap $⊑$  Stock ⊓ (hasMarketValuation.( > 20000))
 
 - LowVolatile stocks have volatility lesser than 0.3:
 
-  > LowVolatileStocks $⊑$ Stock $⊓$ (hasVolatility $<$ 0.3)
+  > LowVolatileStocks $⊑$ Stock $⊓$ (hasVolatility.( $<$ 0.3))
 
 - LowVolatile portfolio holds more than 3 equities each having volatility lesser than 0.3:
 
-  > LowVolatile $⊑ ∃$ hasStock.(LowVolatileStocks)) $⊓$ ($\ge3$ hasStock)]
+  > LowVolatile $⊑ ∃$ hasStock.(LowVolatileStocks)) $⊓$ ($\ge3$ hasStock)
 
 - HighGrowth - Stocks with low pe(<10) and high  profit growth (>40%)
 
-> HighGrowthStocks $⊑$ Stock $⊓$ (hasPE.PE $<$ 10 $⊓$ hasProfitGrowth.ProfitGrowth>40)
+> HighGrowthStocks $⊑$ Stock $⊓$ (hasPE.( $<$ 10) $⊓$ hasProfitGrowth.ProfitGrowth.(>40)) 
 
 * HighGrowth portfolio holds more than 3HighGrowthStocks equities
 
@@ -247,7 +269,9 @@ Now we will model the key concepts and relationships in order to capture above d
 
 
 
-### Task - 3 : a write-up about the design choices made and the details of the design - the explanations for classes, properties, DL axioms, motivating situations/examples - of terms in the ontology. 
+## Task - 3 
+
+##  a write-up about the design choices made and the details of the design - the explanations for classes, properties, DL axioms, motivating situations/examples - of terms in the ontology. 
 
 
 Classes
