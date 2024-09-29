@@ -1,0 +1,162 @@
+<instruments>
+    <instrument>
+        <hasName>Reliance Industries</hasName>
+        <hasReturn>18.5</hasReturn>
+        <hasIssuer>Reliance Group</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <stock>
+            <listedIn>NSE, BSE</listedIn>
+            <hasTicker>RELIANCE</hasTicker>
+            <hasPeType>High</hasPeType>
+            <hasVotingRight>Yes</hasVotingRight>
+            <hasSector>Energy</hasSector>
+            <hasVolatilityType>Moderate</hasVolatilityType>
+            <hasMarketCapType>Large Cap</hasMarketCapType>
+            <type>Common Stock</type>
+        </stock>
+    </instrument>
+    <instrument>
+        <hasName>TCS</hasName>
+        <hasReturn>12.7</hasReturn>
+        <hasIssuer>Tata Group</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <stock>
+            <listedIn>NSE, BSE</listedIn>
+            <hasTicker>TCS</hasTicker>
+            <hasPeType>Moderate</hasPeType>
+            <hasVotingRight>Yes</hasVotingRight>
+            <hasSector>IT Services</hasSector>
+            <hasVolatilityType>Low</hasVolatilityType>
+            <hasMarketCapType>Large Cap</hasMarketCapType>
+            <type>Common Stock</type>
+        </stock>
+    </instrument>
+    <instrument>
+        <hasName>HDFC Bank</hasName>
+        <hasReturn>14.8</hasReturn>
+        <hasIssuer>HDFC Group</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <stock>
+            <listedIn>NSE, BSE</listedIn>
+            <hasTicker>HDFCBANK</hasTicker>
+            <hasPeType>Low</hasPeType>
+            <hasVotingRight>Yes</hasVotingRight>
+            <hasSector>Banking</hasSector>
+            <hasVolatilityType>Moderate</hasVolatilityType>
+            <hasMarketCapType>Large Cap</hasMarketCapType>
+            <type>Common Stock</type>
+        </stock>
+    </instrument>
+    <instrument>
+        <hasName>Infosys</hasName>
+        <hasReturn>15.4</hasReturn>
+        <hasIssuer>Infosys Ltd</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <stock>
+            <listedIn>NSE, BSE</listedIn>
+            <hasTicker>INFY</hasTicker>
+            <hasPeType>Moderate</hasPeType>
+            <hasVotingRight>Yes</hasVotingRight>
+            <hasSector>IT Services</hasSector>
+            <hasVolatilityType>Moderate</hasVolatilityType>
+            <hasMarketCapType>Large Cap</hasMarketCapType>
+            <type>Common Stock</type>
+        </stock>
+    </instrument>
+    <instrument>
+        <hasName>ICICI Bank</hasName>
+        <hasReturn>13.1</hasReturn>
+        <hasIssuer>ICICI Group</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <stock>
+            <listedIn>NSE, BSE</listedIn>
+            <hasTicker>ICICIBANK</hasTicker>
+            <hasPeType>Moderate</hasPeType>
+            <hasVotingRight>Yes</hasVotingRight>
+            <hasSector>Banking</hasSector>
+            <hasVolatilityType>Moderate</hasVolatilityType>
+            <hasMarketCapType>Large Cap</hasMarketCapType>
+            <type>Common Stock</type>
+        </stock>
+    </instrument>
+    <instrument>
+        <hasName>Tata Motors Pref.</hasName>
+        <hasReturn>10.2</hasReturn>
+        <hasIssuer>Tata Motors</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <stock>
+            <listedIn>NSE, BSE</listedIn>
+            <hasTicker>TATAMOTORS</hasTicker>
+            <hasPeType>Low</hasPeType>
+            <hasVotingRight>No</hasVotingRight>
+            <hasSector>Automobile</hasSector>
+            <hasVolatilityType>Low</hasVolatilityType>
+            <hasMarketCapType>Mid Cap</hasMarketCapType>
+            <type>Preferred Stock</type>
+        </stock>
+    </instrument>
+    <instrument>
+        <hasName>Adani Enterprises</hasName>
+        <hasReturn>19.9</hasReturn>
+        <hasIssuer>Adani Group</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <stock>
+            <listedIn>NSE, BSE</listedIn>
+            <hasTicker>ADANIENT</hasTicker>
+            <hasPeType>High</hasPeType>
+            <hasVotingRight>Yes</hasVotingRight>
+            <hasSector>Conglomerate</hasSector>
+            <hasVolatilityType>High</hasVolatilityType>
+            <hasMarketCapType>Large Cap</hasMarketCapType>
+            <type>Common Stock</type>
+        </stock>
+    </instrument>
+    <instrument>
+        <hasName>Bajaj Finance Pref.</hasName>
+        <hasReturn>11.0</hasReturn>
+        <hasIssuer>Bajaj Finance</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <stock>
+            <listedIn>NSE, BSE</listedIn>
+            <hasTicker>BAJFINANCE</hasTicker>
+            <hasPeType>Low</hasPeType>
+            <hasVotingRight>No</hasVotingRight>
+            <hasSector>Finance</hasSector>
+            <hasVolatilityType>Low</hasVolatilityType>
+            <hasMarketCapType>Large Cap</hasMarketCapType>
+            <type>Preferred Stock</type>
+        </stock>
+    </instrument>
+    <instrument>
+        <hasName>HUL</hasName>
+        <hasReturn>10.3</hasReturn>
+        <hasIssuer>Unilever</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <stock>
+            <listedIn>NSE, BSE</listedIn>
+            <hasTicker>HINDUNILVR</hasTicker>
+            <hasPeType>Moderate</hasPeType>
+            <hasVotingRight>Yes</hasVotingRight>
+            <hasSector>FMCG</hasSector>
+            <hasVolatilityType>Low</hasVolatilityType>
+            <hasMarketCapType>Large Cap</hasMarketCapType>
+            <type>Common Stock</type>
+        </stock>
+    </instrument>
+    <instrument>
+        <hasName>Vedanta Pref.</hasName>
+        <hasReturn>9.6</hasReturn>
+        <hasIssuer>Vedanta Group</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <stock>
+            <listedIn>NSE, BSE</listedIn>
+            <hasTicker>VEDL</hasTicker>
+            <hasPeType>Low</hasPeType>
+            <hasVotingRight>No</hasVotingRight>
+            <hasSector>Mining</hasSector>
+            <hasVolatilityType>Low</hasVolatilityType>
+            <hasMarketCapType>Mid Cap</hasMarketCapType>
+            <type>Preferred Stock</type>
+        </stock>
+    </instrument>
+</instruments>

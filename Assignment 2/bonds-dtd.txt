@@ -1,0 +1,9 @@
+<!ELEMENT instruments (instrument+)>
+<!ELEMENT instrument (hasName, hasReturn, hasIssuer, hasLiquidity, Bond)>
+<!ELEMENT hasName (#PCDATA)>
+<!ELEMENT hasReturn (#PCDATA)>
+<!ELEMENT hasIssuer (#PCDATA)>
+<!ELEMENT hasLiquidity (#PCDATA)>
+<!ELEMENT Bond (hasCouponRate, hasTermType)>
+<!ELEMENT hasCouponRate (#PCDATA)>
+<!ELEMENT hasTermType (#PCDATA)>

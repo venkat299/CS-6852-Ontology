@@ -1,0 +1,102 @@
+<instruments>
+    <instrument>
+        <hasName>10-Year Government Bond</hasName>
+        <hasReturn>6.00</hasReturn>
+        <hasIssuer>Government of India</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <Bond>
+            <hasCouponRate>5.70</hasCouponRate>
+            <hasTermType>Fixed</hasTermType>
+        </Bond>
+    </instrument>
+    <instrument>
+        <hasName>5-Year Sovereign Bond</hasName>
+        <hasReturn>5.80</hasReturn>
+        <hasIssuer>Government of India</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <Bond>
+            <hasCouponRate>5.50</hasCouponRate>
+            <hasTermType>Fixed</hasTermType>
+        </Bond>
+    </instrument>
+    <instrument>
+        <hasName>3-Year Corporate Bond</hasName>
+        <hasReturn>7.00</hasReturn>
+        <hasIssuer>Tata Steel</hasIssuer>
+        <hasLiquidity>Medium</hasLiquidity>
+        <Bond>
+            <hasCouponRate>6.80</hasCouponRate>
+            <hasTermType>Fixed</hasTermType>
+        </Bond>
+    </instrument>
+    <instrument>
+        <hasName>10-Year Corporate Bond</hasName>
+        <hasReturn>7.50</hasReturn>
+        <hasIssuer>Reliance Industries</hasIssuer>
+        <hasLiquidity>Medium</hasLiquidity>
+        <Bond>
+            <hasCouponRate>6.90</hasCouponRate>
+            <hasTermType>Fixed</hasTermType>
+        </Bond>
+    </instrument>
+    <instrument>
+        <hasName>10-Year Municipal Bond</hasName>
+        <hasReturn>6.40</hasReturn>
+        <hasIssuer>Municipal Corporation</hasIssuer>
+        <hasLiquidity>Low</hasLiquidity>
+        <Bond>
+            <hasCouponRate>6.20</hasCouponRate>
+            <hasTermType>Fixed</hasTermType>
+        </Bond>
+    </instrument>
+    <instrument>
+        <hasName>7-Year Government Bond</hasName>
+        <hasReturn>6.25</hasReturn>
+        <hasIssuer>Government of India</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <Bond>
+            <hasCouponRate>5.95</hasCouponRate>
+            <hasTermType>Fixed</hasTermType>
+        </Bond>
+    </instrument>
+    <instrument>
+        <hasName>10-Year Sovereign Bond</hasName>
+        <hasReturn>5.75</hasReturn>
+        <hasIssuer>Government of India</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <Bond>
+            <hasCouponRate>5.40</hasCouponRate>
+            <hasTermType>Fixed</hasTermType>
+        </Bond>
+    </instrument>
+    <instrument>
+        <hasName>5-Year Corporate Bond</hasName>
+        <hasReturn>7.20</hasReturn>
+        <hasIssuer>HDFC Ltd</hasIssuer>
+        <hasLiquidity>Medium</hasLiquidity>
+        <Bond>
+            <hasCouponRate>6.70</hasCouponRate>
+            <hasTermType>Fixed</hasTermType>
+        </Bond>
+    </instrument>
+    <instrument>
+        <hasName>15-Year Municipal Bond</hasName>
+        <hasReturn>6.80</hasReturn>
+        <hasIssuer>Municipal Corporation</hasIssuer>
+        <hasLiquidity>Low</hasLiquidity>
+        <Bond>
+            <hasCouponRate>6.30</hasCouponRate>
+            <hasTermType>Fixed</hasTermType>
+        </Bond>
+    </instrument>
+    <instrument>
+        <hasName>10-Year Corporate Bond</hasName>
+        <hasReturn>7.10</hasReturn>
+        <hasIssuer>Infosys</hasIssuer>
+        <hasLiquidity>Medium</hasLiquidity>
+        <Bond>
+            <hasCouponRate>6.50</hasCouponRate>
+            <hasTermType>Fixed</hasTermType>
+        </Bond>
+    </instrument>
+</instruments>

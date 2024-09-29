@@ -1,0 +1,242 @@
+<instruments>
+    <instrument>
+        <hasName>SBI Equity Hybrid Fund</hasName>
+        <hasReturn>15.2</hasReturn>
+        <hasIssuer>SBI Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <mutualFund>
+            <hasRisk>Moderate</hasRisk>
+            <hasInstrument>SBI Stocks</hasInstrument>
+            <hasManager>Rajat Jain</hasManager>
+            <type>Hybrid Funds</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>HDFC Hybrid Equity Fund</hasName>
+        <hasReturn>14.8</hasReturn>
+        <hasIssuer>HDFC Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <mutualFund>
+            <hasRisk>Moderate</hasRisk>
+            <hasInstrument>HDFC BlueChip Stock</hasInstrument>
+            <hasManager>Prashant Jain</hasManager>
+            <type>Hybrid Funds</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>ICICI Prudential Hybrid Fund</hasName>
+        <hasReturn>16.3</hasReturn>
+        <hasIssuer>ICICI Prudential Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <mutualFund>
+            <hasRisk>High</hasRisk>
+            <hasInstrument>ICICI Shares</hasInstrument>
+            <hasManager>Sankaran Naren</hasManager>
+            <type>Hybrid Funds</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>Aditya Birla SL Hybrid</hasName>
+        <hasReturn>14.5</hasReturn>
+        <hasIssuer>Aditya Birla Sun Life AMC</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <mutualFund>
+            <hasRisk>Moderate</hasRisk>
+            <hasInstrument>ABSL Equity</hasInstrument>
+            <hasManager>Mahesh Patil</hasManager>
+            <type>Hybrid Funds</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>Axis Hybrid Equity Fund</hasName>
+        <hasReturn>13.9</hasReturn>
+        <hasIssuer>Axis Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <mutualFund>
+            <hasRisk>Low</hasRisk>
+            <hasInstrument>Axis Stocks</hasInstrument>
+            <hasManager>Jinesh Gopani</hasManager>
+            <type>Hybrid Funds</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>SBI BlueChip Fund</hasName>
+        <hasReturn>12.5</hasReturn>
+        <hasIssuer>SBI Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <mutualFund>
+            <hasRisk>High</hasRisk>
+            <hasInstrument>SBI BlueChip Stock</hasInstrument>
+            <hasManager>Sohini Andani</hasManager>
+            <type>Large-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>ICICI Prudential BlueChip</hasName>
+        <hasReturn>13.7</hasReturn>
+        <hasIssuer>ICICI Prudential Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <mutualFund>
+            <hasRisk>Moderate</hasRisk>
+            <hasInstrument>ICICI Large-Cap</hasInstrument>
+            <hasManager>Sankaran Naren</hasManager>
+            <type>Large-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>HDFC Top 100 Fund</hasName>
+        <hasReturn>14.1</hasReturn>
+        <hasIssuer>HDFC Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <mutualFund>
+            <hasRisk>High</hasRisk>
+            <hasInstrument>HDFC Large-Cap</hasInstrument>
+            <hasManager>Prashant Jain</hasManager>
+            <type>Large-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>Axis BlueChip Fund</hasName>
+        <hasReturn>12.9</hasReturn>
+        <hasIssuer>Axis Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <mutualFund>
+            <hasRisk>Moderate</hasRisk>
+            <hasInstrument>Axis Large-Cap</hasInstrument>
+            <hasManager>Shreyash Devalkar</hasManager>
+            <type>Large-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>Kotak BlueChip Fund</hasName>
+        <hasReturn>13.2</hasReturn>
+        <hasIssuer>Kotak Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <mutualFund>
+            <hasRisk>High</hasRisk>
+            <hasInstrument>Kotak Large-Cap</hasInstrument>
+            <hasManager>Harsha Upadhyaya</hasManager>
+            <type>Large-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>HDFC Mid-Cap Opportunities</hasName>
+        <hasReturn>16.7</hasReturn>
+        <hasIssuer>HDFC Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <mutualFund>
+            <hasRisk>High</hasRisk>
+            <hasInstrument>HDFC Mid-Cap Stock</hasInstrument>
+            <hasManager>Chirag Setalvad</hasManager>
+            <type>Mid-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>Axis Mid-Cap Fund</hasName>
+        <hasReturn>18.4</hasReturn>
+        <hasIssuer>Axis Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <mutualFund>
+            <hasRisk>High</hasRisk>
+            <hasInstrument>Axis Mid-Cap Stock</hasInstrument>
+            <hasManager>Shreyash Devalkar</hasManager>
+            <type>Mid-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>SBI Magnum Mid-Cap Fund</hasName>
+        <hasReturn>17.5</hasReturn>
+        <hasIssuer>SBI Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <mutualFund>
+            <hasRisk>High</hasRisk>
+            <hasInstrument>SBI Mid-Cap Stock</hasInstrument>
+            <hasManager>R. Srinivasan</hasManager>
+            <type>Mid-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>Franklin India Prima Fund</hasName>
+        <hasReturn>16.2</hasReturn>
+        <hasIssuer>Franklin Templeton AMC</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <mutualFund>
+            <hasRisk>High</hasRisk>
+            <hasInstrument>Franklin Mid-Cap</hasInstrument>
+            <hasManager>Anand Radhakrishnan</hasManager>
+            <type>Mid-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>ICICI Prudential Mid-Cap</hasName>
+        <hasReturn>17.0</hasReturn>
+        <hasIssuer>ICICI Prudential Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <mutualFund>
+            <hasRisk>High</hasRisk>
+            <hasInstrument>ICICI Mid-Cap</hasInstrument>
+            <hasManager>Sankaran Naren</hasManager>
+            <type>Mid-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>SBI Small Cap Fund</hasName>
+        <hasReturn>19.2</hasReturn>
+        <hasIssuer>SBI Mutual Fund</hasIssuer>
+        <hasLiquidity>Low</hasLiquidity>
+        <mutualFund>
+            <hasRisk>High</hasRisk>
+            <hasInstrument>SBI Small-Cap Stock</hasInstrument>
+            <hasManager>R. Srinivasan</hasManager>
+            <type>Small-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>Axis Small Cap Fund</hasName>
+        <hasReturn>21.0</hasReturn>
+        <hasIssuer>Axis Mutual Fund</hasIssuer>
+        <hasLiquidity>Low</hasLiquidity>
+        <mutualFund>
+            <hasRisk>High</hasRisk>
+            <hasInstrument>Axis Small-Cap</hasInstrument>
+            <hasManager>Shreyash Devalkar</hasManager>
+            <type>Small-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>HDFC Small Cap Fund</hasName>
+        <hasReturn>18.9</hasReturn>
+        <hasIssuer>HDFC Mutual Fund</hasIssuer>
+        <hasLiquidity>Low</hasLiquidity>
+        <mutualFund>
+            <hasRisk>High</hasRisk>
+            <hasInstrument>HDFC Small-Cap</hasInstrument>
+            <hasManager>Chirag Setalvad</hasManager>
+            <type>Small-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>ICICI Prudential Small Cap</hasName>
+        <hasReturn>20.4</hasReturn>
+        <hasIssuer>ICICI Prudential Mutual Fund</hasIssuer>
+        <hasLiquidity>Low</hasLiquidity>
+        <mutualFund>
+            <hasRisk>High</hasRisk>
+            <hasInstrument>ICICI Small-Cap</hasInstrument>
+            <hasManager>Sankaran Naren</hasManager>
+            <type>Small-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+    <instrument>
+        <hasName>Franklin India Smaller Cos</hasName>
+        <hasReturn>19.7</hasReturn>
+        <hasIssuer>Franklin Templeton AMC</hasIssuer>
+        <hasLiquidity>Low</hasLiquidity>
+        <mutualFund>
+            <hasRisk>High</hasRisk>
+            <hasInstrument>Franklin Small-Cap</hasInstrument>
+            <hasManager>Anand Radhakrishnan</hasManager>
+            <type>Small-Cap Equity Fund</type>
+        </mutualFund>
+    </instrument>
+</instruments>

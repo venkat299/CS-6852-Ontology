@@ -1,0 +1,313 @@
+<instruments>
+    <!-- Short-Term Debt Funds -->
+    <instrument>
+        <hasName>ICICI Prudential Short-Term Fund</hasName>
+        <hasReturn>7.1</hasReturn>
+        <hasIssuer>ICICI Prudential Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <debtFund>
+            <hasTermType>Short-Term</hasTermType>
+            <type>Short-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+    <instrument>
+        <hasName>SBI Short-Term Debt Fund</hasName>
+        <hasReturn>6.8</hasReturn>
+        <hasIssuer>SBI Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <debtFund>
+            <hasTermType>Short-Term</hasTermType>
+            <type>Short-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+    <instrument>
+        <hasName>HDFC Short-Term Fund</hasName>
+        <hasReturn>7.4</hasReturn>
+        <hasIssuer>HDFC Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <debtFund>
+            <hasTermType>Short-Term</hasTermType>
+            <type>Short-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+    <instrument>
+        <hasName>Axis Short-Term Debt Fund</hasName>
+        <hasReturn>6.9</hasReturn>
+        <hasIssuer>Axis Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <debtFund>
+            <hasTermType>Short-Term</hasTermType>
+            <type>Short-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+    <instrument>
+        <hasName>Kotak Short-Term Fund</hasName>
+        <hasReturn>7.2</hasReturn>
+        <hasIssuer>Kotak Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <debtFund>
+            <hasTermType>Short-Term</hasTermType>
+            <type>Short-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+
+    <!-- Medium-Term Debt Funds -->
+    <instrument>
+        <hasName>ICICI Prudential Medium-Term Fund</hasName>
+        <hasReturn>7.5</hasReturn>
+        <hasIssuer>ICICI Prudential Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <debtFund>
+            <hasTermType>Medium-Term</hasTermType>
+            <type>Medium-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+    <instrument>
+        <hasName>SBI Medium-Term Debt Fund</hasName>
+        <hasReturn>7.0</hasReturn>
+        <hasIssuer>SBI Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <debtFund>
+            <hasTermType>Medium-Term</hasTermType>
+            <type>Medium-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+    <instrument>
+        <hasName>HDFC Medium-Term Fund</hasName>
+        <hasReturn>7.8</hasReturn>
+        <hasIssuer>HDFC Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <debtFund>
+            <hasTermType>Medium-Term</hasTermType>
+            <type>Medium-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+    <instrument>
+        <hasName>Axis Medium-Term Debt Fund</hasName>
+        <hasReturn>7.2</hasReturn>
+        <hasIssuer>Axis Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <debtFund>
+            <hasTermType>Medium-Term</hasTermType>
+            <type>Medium-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+    <instrument>
+        <hasName>Kotak Medium-Term Fund</hasName>
+        <hasReturn>7.6</hasReturn>
+        <hasIssuer>Kotak Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <debtFund>
+            <hasTermType>Medium-Term</hasTermType>
+            <type>Medium-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+
+    <!-- Long-Term Debt Funds -->
+    <instrument>
+        <hasName>ICICI Prudential Long-Term Fund</hasName>
+        <hasReturn>8.0</hasReturn>
+        <hasIssuer>ICICI Prudential Mutual Fund</hasIssuer>
+        <hasLiquidity>Low</hasLiquidity>
+        <debtFund>
+            <hasTermType>Long-Term</hasTermType>
+            <type>Long-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+    <instrument>
+        <hasName>SBI Long-Term Debt Fund</hasName>
+        <hasReturn>7.9</hasReturn>
+        <hasIssuer>SBI Mutual Fund</hasIssuer>
+        <hasLiquidity>Low</hasLiquidity>
+        <debtFund>
+            <hasTermType>Long-Term</hasTermType>
+            <type>Long-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+    <instrument>
+        <hasName>HDFC Long-Term Fund</hasName>
+        <hasReturn>8.2</hasReturn>
+        <hasIssuer>HDFC Mutual Fund</hasIssuer>
+        <hasLiquidity>Low</hasLiquidity>
+        <debtFund>
+            <hasTermType>Long-Term</hasTermType>
+            <type>Long-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+    <instrument>
+        <hasName>Axis Long-Term Debt Fund</hasName>
+        <hasReturn>7.8</hasReturn>
+        <hasIssuer>Axis Mutual Fund</hasIssuer>
+        <hasLiquidity>Low</hasLiquidity>
+        <debtFund>
+            <hasTermType>Long-Term</hasTermType>
+            <type>Long-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+    <instrument>
+        <hasName>Kotak Long-Term Fund</hasName>
+        <hasReturn>8.1</hasReturn>
+        <hasIssuer>Kotak Mutual Fund</hasIssuer>
+        <hasLiquidity>Low</hasLiquidity>
+        <debtFund>
+            <hasTermType>Long-Term</hasTermType>
+            <type>Long-Term Debt Fund</type>
+        </debtFund>
+    </instrument>
+
+    <!-- Government Money Market Funds -->
+    <instrument>
+        <hasName>ICICI Government Money Market Fund</hasName>
+        <hasReturn>4.2</hasReturn>
+        <hasIssuer>ICICI Prudential Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Government</hasTermType>
+            <type>Government Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+    <instrument>
+        <hasName>SBI Government Money Market Fund</hasName>
+        <hasReturn>4.1</hasReturn>
+        <hasIssuer>SBI Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Government</hasTermType>
+            <type>Government Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+    <instrument>
+        <hasName>HDFC Government Money Market Fund</hasName>
+        <hasReturn>4.3</hasReturn>
+        <hasIssuer>HDFC Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Government</hasTermType>
+            <type>Government Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+    <instrument>
+        <hasName>Axis Government Money Market Fund</hasName>
+        <hasReturn>4.0</hasReturn>
+        <hasIssuer>Axis Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Government</hasTermType>
+            <type>Government Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+    <instrument>
+        <hasName>Kotak Government Money Market Fund</hasName>
+        <hasReturn>4.4</hasReturn>
+        <hasIssuer>Kotak Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Government</hasTermType>
+            <type>Government Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+
+    <!-- Prime Money Market Funds -->
+    <instrument>
+        <hasName>ICICI Prime Money Market Fund</hasName>
+        <hasReturn>4.6</hasReturn>
+        <hasIssuer>ICICI Prudential Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Prime</hasTermType>
+            <type>Prime Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+    <instrument>
+        <hasName>SBI Prime Money Market Fund</hasName>
+        <hasReturn>4.7</hasReturn>
+        <hasIssuer>SBI Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Prime</hasTermType>
+            <type>Prime Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+    <instrument>
+        <hasName>HDFC Prime Money Market Fund</hasName>
+        <hasReturn>4.5</hasReturn>
+        <hasIssuer>HDFC Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Prime</hasTermType>
+            <type>Prime Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+    <instrument>
+        <hasName>Axis Prime Money Market Fund</hasName>
+        <hasReturn>4.8</hasReturn>
+        <hasIssuer>Axis Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Prime</hasTermType>
+            <type>Prime Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+    <instrument>
+        <hasName>Kotak Prime Money Market Fund</hasName>
+        <hasReturn>4.9</hasReturn>
+        <hasIssuer>Kotak Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Prime</hasTermType>
+            <type>Prime Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+
+    <!-- Municipal Money Market Funds -->
+    <instrument>
+        <hasName>ICICI Municipal Money Market Fund</hasName>
+        <hasReturn>3.5</hasReturn>
+        <hasIssuer>ICICI Prudential Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Municipal</hasTermType>
+            <type>Municipal Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+    <instrument>
+        <hasName>SBI Municipal Money Market Fund</hasName>
+        <hasReturn>3.4</hasReturn>
+        <hasIssuer>SBI Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Municipal</hasTermType>
+            <type>Municipal Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+    <instrument>
+        <hasName>HDFC Municipal Money Market Fund</hasName>
+        <hasReturn>3.6</hasReturn>
+        <hasIssuer>HDFC Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Municipal</hasTermType>
+            <type>Municipal Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+    <instrument>
+        <hasName>Axis Municipal Money Market Fund</hasName>
+        <hasReturn>3.7</hasReturn>
+        <hasIssuer>Axis Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Municipal</hasTermType>
+            <type>Municipal Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+    <instrument>
+        <hasName>Kotak Municipal Money Market Fund</hasName>
+        <hasReturn>3.8</hasReturn>
+        <hasIssuer>Kotak Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <moneyMarketFund>
+            <hasTermType>Municipal</hasTermType>
+            <type>Municipal Money Market Fund</type>
+        </moneyMarketFund>
+    </instrument>
+</instruments>
