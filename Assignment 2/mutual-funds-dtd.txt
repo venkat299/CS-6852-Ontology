@@ -1,0 +1,11 @@
+<!ELEMENT instruments (instrument+)>
+<!ELEMENT instrument (hasName, hasReturn, hasIssuer, hasLiquidity, mutualFund)>
+<!ELEMENT hasName (#PCDATA)>
+<!ELEMENT hasReturn (#PCDATA)>
+<!ELEMENT hasIssuer (#PCDATA)>
+<!ELEMENT hasLiquidity (#PCDATA)>
+<!ELEMENT mutualFund (hasRisk, hasInstrument, hasManager, type)>
+<!ELEMENT hasRisk (#PCDATA)>
+<!ELEMENT hasInstrument (#PCDATA)>
+<!ELEMENT hasManager (#PCDATA)>
+<!ELEMENT type (#PCDATA)>

@@ -1,0 +1,189 @@
+<instruments>
+    <!-- Equity Index Funds -->
+    <instrument>
+        <hasName>HDFC Nifty 50 Index Fund</hasName>
+        <hasReturn>12.3</hasReturn>
+        <hasIssuer>HDFC Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <indexFund>
+            <type>Equity Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>SBI Sensex Index Fund</hasName>
+        <hasReturn>11.8</hasReturn>
+        <hasIssuer>SBI Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <indexFund>
+            <type>Equity Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>ICICI Prudential Nifty Next 50 Index Fund</hasName>
+        <hasReturn>13.1</hasReturn>
+        <hasIssuer>ICICI Prudential Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <indexFund>
+            <type>Equity Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>Kotak Nifty 50 Index Fund</hasName>
+        <hasReturn>12.5</hasReturn>
+        <hasIssuer>Kotak Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <indexFund>
+            <type>Equity Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>Axis Nifty 100 Index Fund</hasName>
+        <hasReturn>12.0</hasReturn>
+        <hasIssuer>Axis Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <indexFund>
+            <type>Equity Index Fund</type>
+        </indexFund>
+    </instrument>
+
+    <!-- Bond Index Funds -->
+    <instrument>
+        <hasName>ICICI Prudential Bond Index Fund</hasName>
+        <hasReturn>7.0</hasReturn>
+        <hasIssuer>ICICI Prudential Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <indexFund>
+            <type>Bond Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>SBI Bond Index Fund</hasName>
+        <hasReturn>6.8</hasReturn>
+        <hasIssuer>SBI Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <indexFund>
+            <type>Bond Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>HDFC Bond Index Fund</hasName>
+        <hasReturn>7.2</hasReturn>
+        <hasIssuer>HDFC Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <indexFund>
+            <type>Bond Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>Kotak Bond Index Fund</hasName>
+        <hasReturn>7.1</hasReturn>
+        <hasIssuer>Kotak Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <indexFund>
+            <type>Bond Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>Axis Bond Index Fund</hasName>
+        <hasReturn>7.0</hasReturn>
+        <hasIssuer>Axis Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <indexFund>
+            <type>Bond Index Fund</type>
+        </indexFund>
+    </instrument>
+
+    <!-- Commodity Index Funds -->
+    <instrument>
+        <hasName>ICICI Prudential Gold Index Fund</hasName>
+        <hasReturn>9.5</hasReturn>
+        <hasIssuer>ICICI Prudential Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <indexFund>
+            <type>Commodity Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>SBI Gold Index Fund</hasName>
+        <hasReturn>9.8</hasReturn>
+        <hasIssuer>SBI Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <indexFund>
+            <type>Commodity Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>HDFC Gold Index Fund</hasName>
+        <hasReturn>10.0</hasReturn>
+        <hasIssuer>HDFC Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <indexFund>
+            <type>Commodity Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>Kotak Silver Index Fund</hasName>
+        <hasReturn>8.5</hasReturn>
+        <hasIssuer>Kotak Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <indexFund>
+            <type>Commodity Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>Axis Gold Index Fund</hasName>
+        <hasReturn>9.7</hasReturn>
+        <hasIssuer>Axis Mutual Fund</hasIssuer>
+        <hasLiquidity>High</hasLiquidity>
+        <indexFund>
+            <type>Commodity Index Fund</type>
+        </indexFund>
+    </instrument>
+
+    <!-- Real Estate Index Funds -->
+    <instrument>
+        <hasName>ICICI Prudential Real Estate Index Fund</hasName>
+        <hasReturn>11.5</hasReturn>
+        <hasIssuer>ICICI Prudential Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <indexFund>
+            <type>Real Estate Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>SBI Real Estate Index Fund</hasName>
+        <hasReturn>11.3</hasReturn>
+        <hasIssuer>SBI Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <indexFund>
+            <type>Real Estate Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>HDFC Real Estate Index Fund</hasName>
+        <hasReturn>11.8</hasReturn>
+        <hasIssuer>HDFC Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <indexFund>
+            <type>Real Estate Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>Kotak Real Estate Index Fund</hasName>
+        <hasReturn>12.0</hasReturn>
+        <hasIssuer>Kotak Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <indexFund>
+            <type>Real Estate Index Fund</type>
+        </indexFund>
+    </instrument>
+    <instrument>
+        <hasName>Axis Real Estate Index Fund</hasName>
+        <hasReturn>12.2</hasReturn>
+        <hasIssuer>Axis Mutual Fund</hasIssuer>
+        <hasLiquidity>Moderate</hasLiquidity>
+        <indexFund>
+            <type>Real Estate Index Fund</type>
+        </indexFund>
+    </instrument>
+</instruments>

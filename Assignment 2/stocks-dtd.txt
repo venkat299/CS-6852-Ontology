@@ -1,0 +1,15 @@
+<!ELEMENT instruments (instrument+)>
+<!ELEMENT instrument (hasName, hasReturn, hasIssuer, hasLiquidity, stock)>
+<!ELEMENT hasName (#PCDATA)>
+<!ELEMENT hasReturn (#PCDATA)>
+<!ELEMENT hasIssuer (#PCDATA)>
+<!ELEMENT hasLiquidity (#PCDATA)>
+<!ELEMENT stock (listedIn, hasTicker, hasPeType, hasVotingRight, hasSector, hasVolatilityType, hasMarketCapType, type)>
+<!ELEMENT listedIn (#PCDATA)>
+<!ELEMENT hasTicker (#PCDATA)>
+<!ELEMENT hasPeType (#PCDATA)>
+<!ELEMENT hasVotingRight (#PCDATA)>
+<!ELEMENT hasSector (#PCDATA)>
+<!ELEMENT hasVolatilityType (#PCDATA)>
+<!ELEMENT hasMarketCapType (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
