@@ -1,0 +1,7 @@
+<!DOCTYPE issuers [
+    <!ELEMENT issuers (issuer+)>
+    <!ELEMENT issuer (name, issuerType, hasCountry)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT issuerType (#PCDATA)>
+    <!ELEMENT hasCountry (#PCDATA)>
+]>
