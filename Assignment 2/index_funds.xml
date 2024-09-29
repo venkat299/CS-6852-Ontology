@@ -1,3 +1,13 @@
+<!DOCTYPE instruments [
+    <!ELEMENT instruments (instrument+)>
+    <!ELEMENT instrument (hasName, hasReturn, hasIssuer, hasLiquidity, indexFund)>
+    <!ELEMENT hasName (#PCDATA)>
+    <!ELEMENT hasReturn (#PCDATA)>
+    <!ELEMENT hasIssuer (#PCDATA)>
+    <!ELEMENT hasLiquidity (#PCDATA)>
+    <!ELEMENT indexFund (type)>
+    <!ELEMENT type (#PCDATA)>
+]>
 <instruments>
     <!-- Equity Index Funds -->
     <instrument>
