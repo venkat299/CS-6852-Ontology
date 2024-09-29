@@ -1,0 +1,60 @@
+<!DOCTYPE issuers [
+    <!ELEMENT issuers (issuer+)>
+    <!ELEMENT issuer (name, issuerType, hasCountry)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT issuerType (#PCDATA)>
+    <!ELEMENT hasCountry (#PCDATA)>
+]>
+
+<issuers>
+    <issuer>
+        <name>Reliance Group</name>
+        <issuerType>organization</issuerType>
+        <hasCountry>India</hasCountry>
+    </issuer>
+    <issuer>
+        <name>Tata Group</name>
+        <issuerType>organization</issuerType>
+        <hasCountry>India</hasCountry>
+    </issuer>
+    <issuer>
+        <name>HDFC Group</name>
+        <issuerType>organization</issuerType>
+        <hasCountry>India</hasCountry>
+    </issuer>
+    <issuer>
+        <name>Infosys Ltd</name>
+        <issuerType>organization</issuerType>
+        <hasCountry>India</hasCountry>
+    </issuer>
+    <issuer>
+        <name>ICICI Group</name>
+        <issuerType>organization</issuerType>
+        <hasCountry>India</hasCountry>
+    </issuer>
+    <issuer>
+        <name>Tata Motors</name>
+        <issuerType>organization</issuerType>
+        <hasCountry>India</hasCountry>
+    </issuer>
+    <issuer>
+        <name>Adani Group</name>
+        <issuerType>organization</issuerType>
+        <hasCountry>India</hasCountry>
+    </issuer>
+    <issuer>
+        <name>Bajaj Finance</name>
+        <issuerType>organization</issuerType>
+        <hasCountry>India</hasCountry>
+    </issuer>
+    <issuer>
+        <name>Unilever</name>
+        <issuerType>organization</issuerType>
+        <hasCountry>India</hasCountry>
+    </issuer>
+    <issuer>
+        <name>Vedanta Group</name>
+        <issuerType>organization</issuerType>
+        <hasCountry>India</hasCountry>
+    </issuer>
+</issuers>
