@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE indices [
+    <!ELEMENT indices (index+)>
+    <!ELEMENT index (hasName, hasStock, hasReturn, hasType)>
+    <!ELEMENT hasName (#PCDATA)>
+    <!ELEMENT hasStock (#PCDATA)>
+    <!ELEMENT hasReturn (#PCDATA)>
+    <!ELEMENT hasType (#PCDATA)>
+]>
+<indices>
+    <!-- Equity Index Funds -->
+    <index>
+        <hasName>Nifty 50</hasName>
+        <hasStock>Large Cap Stocks</hasStock>
+        <hasReturn>12.3</hasReturn>
+        <hasType>Equity Index</hasType>
+    </index>
+    <index>
+        <hasName>Sensex</hasName>
+        <hasStock>Large Cap Stocks</hasStock>
+        <hasReturn>11.8</hasReturn>
+        <hasType>Equity Index</hasType>
+    </index>
+    <index>
+        <hasName>Nifty Next 50</hasName>
+        <hasStock>Mid Cap Stocks</hasStock>
+        <hasReturn>13.1</hasReturn>
+        <hasType>Equity Index</hasType>
+    </index>
+    <index>
+        <hasName>Nifty 50</hasName>
+        <hasStock>Large Cap Stocks</hasStock>
+        <hasReturn>12.5</hasReturn>
+        <hasType>Equity Index</hasType>
+    </index>
+    <index>
+        <hasName>Nifty 100</hasName>
+        <hasStock>Large Cap Stocks</hasStock>
+        <hasReturn>12.0</hasReturn>
+        <hasType>Equity Index</hasType>
+    </index>
+
+    <!-- Bond Index Funds -->
+    <index>
+        <hasName>Bond Index</hasName>
+        <hasStock>Government Bonds</hasStock>
+        <hasReturn>7.0</hasReturn>
+        <hasType>Bond Index</hasType>
+    </index>
+    <index>
+        <hasName>Bond Index</hasName>
+        <hasStock>Government Bonds</hasStock>
+        <hasReturn>6.8</hasReturn>
+        <hasType>Bond Index</hasType>
+    </index>
+    <index>
+        <hasName>Bond Index</hasName>
+        <hasStock>Government Bonds</hasStock>
+        <hasReturn>7.2</hasReturn>
+        <hasType>Bond Index</hasType>
+    </index>
+    <index>
+        <hasName>Bond Index</hasName>
+        <hasStock>Government Bonds</hasStock>
+        <hasReturn>7.1</hasReturn>
+        <hasType>Bond Index</hasType>
+    </index>
+    <index>
+        <hasName>Bond Index</hasName>
+        <hasStock>Government Bonds</hasStock>
+        <hasReturn>7.0</hasReturn>
+        <hasType>Bond Index</hasType>
+    </index>
+
+    <!-- Commodity Index Funds -->
+    <index>
+        <hasName>Gold</hasName>
+        <hasStock>Gold Assets</hasStock>
+        <hasReturn>9.5</hasReturn>
+        <hasType>Commodity Index</hasType>
+    </index>
+    <index>
+        <hasName>Gold</hasName>
+        <hasStock>Gold Assets</hasStock>
+        <hasReturn>9.8</hasReturn>
+        <hasType>Commodity Index</hasType>
+    </index>
+    <index>
+        <hasName>Gold</hasName>
+        <hasStock>Gold Assets</hasStock>
+        <hasReturn>10.0</hasReturn>
+        <hasType>Commodity Index</hasType>
+    </index>
+    <index>
+        <hasName>Silver</hasName>
+        <hasStock>Silver Assets</hasStock>
+        <hasReturn>8.5</hasReturn>
+        <hasType>Commodity Index</hasType>
+    </index>
+    <index>
+        <hasName>Gold</hasName>
+        <hasStock>Gold Assets</hasStock>
+        <hasReturn>9.7</hasReturn>
+        <hasType>Commodity Index</hasType>
+    </index>
+
+    <!-- Real Estate Index Funds -->
+    <index>
+        <hasName>Real Estate Index</hasName>
+        <hasStock>Real Estate Assets</hasStock>
+        <hasReturn>11.5</hasReturn>
+        <hasType>Real Estate Index</hasType>
+    </index>
+    <index>
+        <hasName>Real Estate Index</hasName>
+        <hasStock>Real Estate Assets</hasStock>
+        <hasReturn>11.3</hasReturn>
+        <hasType>Real Estate Index</hasType>
+    </index>
+    <index>
+        <hasName>Real Estate Index</hasName>
+        <hasStock>Real Estate Assets</hasStock>
+        <hasReturn>11.8</hasReturn>
+        <hasType>Real Estate Index</hasType>
+    </index>
+    <index>
+        <hasName>Real Estate Index</hasName>
+        <hasStock>Real Estate Assets</hasStock>
+        <hasReturn>12.0</hasReturn>
+        <hasType>Real Estate Index</hasType>
+    </index>
+    <index>
+        <hasName>Real Estate Index</hasName>
+        <hasStock>Real Estate Assets</hasStock>
+        <hasReturn>12.2</hasReturn>
+        <hasType>Real Estate Index</hasType>
+    </index>
+</indices>
