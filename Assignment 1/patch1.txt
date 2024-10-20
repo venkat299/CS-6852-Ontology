@@ -1,0 +1,143 @@
+--- original.md
++++ corrected.md
+@@ -12,7 +12,7 @@
+ ## Task - 1
+
+ ### Domain of Interest
+-The domain of interest is **financial instruments** from the perspective of **retail investors**. The ontology aims to model the sentiment associated with various financial instruments, such as stocks, bonds, mutual funds, etc., based on information that retail investors encounter(News headlines, snippets from Annual reports, etc). This information includes company performance, market conditions, and specific aspects of the company's operations or financial health. The goal is to automatically classify financial instruments into either Positive or Negative categories based on the sentiment derived from triplets containing:
++The domain of interest is **financial instruments** from the perspective of **retail investors**. The ontology aims to model the sentiment associated with various financial instruments, such as stocks, bonds, mutual funds, etc., based on information that retail investors encounter (news headlines, snippets from annual reports, etc.). This information includes company performance, market conditions, and specific aspects of the company's operations or financial health. The goal is to automatically classify financial instruments into either Positive or Negative categories based on the sentiment derived from triplets containing:
+
+ 1. Company Name: The entity or organisation to which the financial instrument is linked.
+ 2. Aspect of the Company: Specific attributes or factors related to the company (e.g., stock price, earnings report, management, etc.).
+@@ -24,14 +24,14 @@
+
+ > Info 2 : HCL  debt reduced by 5 %
+
+-The above piece of information can be converted into an equivalent triplet ("TCS", "profit", "jumped") and ("HCL", "debt", "reduced")
+-respectively
++The above pieces of information can be converted into equivalent triplets ("TCS", "profit", "jumped") and ("HCL", "debt", "reduced")
++respectively.
+
+-The above information can be stored in ontology and can be used to for reasoning like
++The above information can be stored in an ontology and can be used for reasoning like:
+
+-*  Is the "Info 1" a positively info?
++*  Is "Info 1" positive information?
+ * Which company is affected by it?
+-* Which Mutual funds contains the stock of the affected company?
++* Which mutual funds contain the stock of the affected company?
+
+ Our attempt is to use ontology to model this basic information.
+
+@@ -39,7 +39,7 @@
+
+ - To reduce the complexity of model, only information which are in above triplet form is considered for modelling.
+ - Only binary classification (Negative and Positive labels) are considered for classifying the information and instruments.
+-- Only bond and stocks are considered as instrument
++- Only bonds and stocks are considered as instruments.
+
+
+
+@@ -47,7 +47,7 @@
+
+ ### Concrete Pieces of Knowledge to Capture
+
+-Top level classes considered in this ontology
++Top-level classes considered in this ontology:
+
+ ![image-20241019132115446](./image-20241019132115446.png)
+
+@@ -68,9 +68,9 @@
+
+ 2. **Companies and their financial instruments**: Ontology model has to capture information about various companies and the financial instruments they issue (restricted to Bond and Stocks).
+
+-   * Company issues Stock and Bonds and  based on the information available we have to classify the company as Positive and Negative sub-classes
++   * Company issues Stocks and Bonds, and based on the available information, we have to classify the company into Positive and Negative sub-classes.
+
+-
++
+
+
+
+@@ -120,12 +120,12 @@
+ 3. **Aspects of a company**:
+
+    1. Key attributes or aspects of company that are important to retail investors (e.g., stock performance, market share, earnings, or corporate governance).
+-      * Here the aspect can be a positive aspect (eg `profit`, `share price`, `stores`) or negative aspect (eg `debt`, `loss`,)
+-      * Company Part like `branches`,  `stores` etc are under Positive aspects
++      * Here, the aspect can be a positive aspect (e.g., `profit`, `share price`, `stores`) or a negative aspect (e.g., `debt`, `loss`)
++      * Company Parts like `branches`, `stores`, etc. are under Positive aspects
+
+ ```mermaid
+ classDiagram
+-    class Aspect {
++    class Aspect {
+     }
+
+     Aspect <|-- PositiveAspect : subclass
+@@ -138,16 +138,16 @@
+
+ 4. **Actions and Properties**
+
+-   * Properties are mostly adjectives (like `lower`, `better`, etc.,) present in the information triplet that describe the aspect of the company and gives the directionality of that aspect
++   * Properties are mostly adjectives (like `lower`, `better`, etc.) present in the information triplet that describe the aspect of the company and give the directionality of that aspect
+
+      * **Decreasing  & Increasing Property**
+-       * Decreasing property  (eg. `lower`, `reduction`)  when combined with the positive aspects (eg `profit`, `margin`) will give a negative label to information
+-       *  but when combined with the negative aspects (eg `loss`, `margin`) will give a positive label to information
++       * Decreasing property (e.g., `lower`, `reduction`) when combined with positive aspects (e.g., `profit`, `margin`) will give a negative label to information
++       * But when combined with negative aspects (e.g., `loss`, `margin`), it will give a positive label to information
+        * Similar argument can be made for Increasing property
+      * **Negative and Positive Property**
+-       * These are property which inherently carries negative or positive sentiments irrespective of the aspect it is tied to it, ,
+-         eg (`underperforming`, `loss-making`, `bankrupt` .etc) for Negative Property
+-         eg (`robust`,  `successful` etc )  for Positive Property
++       * These are properties which inherently carry negative or positive sentiments irrespective of the aspect they are tied to,
++         e.g., (`underperforming`, `loss-making`, `bankrupt`, etc.) for Negative Property
++         e.g., (`robust`, `successful`, etc.) for Positive Property
+
+      ```mermaid
+      classDiagram
+@@ -164,11 +164,11 @@
+
+
+
+-   * Similar argument can be made for actions except  that actions are generally verbs (like **creates** jobs, **closed** stores, etc)
++   * A similar argument can be made for actions, except that actions are generally verbs (like **creates** jobs, **closed** stores, etc.)
+
+-     * `achieves`,  `declines` - example for Negative Actions
+-     * `struggles`,  `loses `- example for Positive Actions
+-     * `reports` profit, `reports` loss, etc  - are examples for Increasing or Decreasing  Actions that can convey sentiment based on the aspect it is tied to
++     * `achieves`, `declines` - examples of Negative Actions
++     * `struggles`, `loses` - examples of Positive Actions
++     * `reports` profit, `reports` loss, etc. - are examples of Increasing or Decreasing Actions that can convey sentiment based on the aspect they are tied to
+
+      ```mermaid
+      classDiagram
+@@ -184,7 +184,7 @@
+
+
+
+-5. **Directionality of the information**: Whether a change in specific aspect  or an event related to company is viewed positively or negatively.
++5. **Directionality of the information**: Whether a change in a specific aspect or an event related to a company is viewed positively or negatively.
+
+
+
+@@ -305,9 +305,9 @@
+-- Consider the below class diagram where black lines indicate the sub class relationship.
++- Consider the below class diagram where black lines indicate the subclass relationship.
+
+-- Core idea is to classify the aspect of the company and the directionality of the aspect into separate classes for easy modelling
++- The core idea is to classify the aspect of the company and the directionality of the aspect into separate classes for easy modelling.
+
+ - Classifying aspect into verb and adjective enables to model words directly without using any external lexical processing.
+
+@@ -326,7 +326,7 @@
+ ### Motivating Situations and Examples
+
+ ##### Example 1: Stock Sentiment Analysis
+-- Consider a scenario where a retail investor wants to assess the sentiment of a stock (say, "StockA") issued by "CompanyA." The investor checks recent news that "CompanyA's earnings increased." This information would be represented in the ontology as:
++- Consider a scenario where a retail investor wants to assess the sentiment of a stock (say, "StockA") issued by "CompanyA". The investor checks recent news that "CompanyA's earnings increased." This information would be represented in the ontology as:
+   - `CompanyA hasAspect earnings`
+   - `earnings` is an instance of `Class:PositiveAspect`
+   - `increased` is an instance of `Class:Increase`
