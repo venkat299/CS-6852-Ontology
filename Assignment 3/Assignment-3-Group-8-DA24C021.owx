@@ -1,0 +1,1266 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling">
+    <Prefix name="" IRI="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#"/>
+    <Prefix name="fm" IRI="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Financial modelling concerned with stocks, mutual funds and financial information</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#AtomicInstrument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BondIndex"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DebtFund"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ETF"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EquityFund"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EquityIndex"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HybridFund"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MarketIndex"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NegativeCompany"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NegativeInfo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NegativeInstrument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NegativeMutualFund"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NegativeStock"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PositiveCompany"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PositiveInfo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PositiveInstrument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PositiveMutualFund"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PositiveStock"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Aspect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Bond"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Company"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CompanyPart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Decrease"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/DecreasingAction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/DecreasingProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Directionality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Increase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/IncreasingAction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/IncreasingProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Information"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Instrument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/MutualFund"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Negative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/NegativeAction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/NegativeAspect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/NegativeProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Positive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/PositiveAction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/PositiveAspect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/PositiveProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Stock"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBondAsset"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInstrument"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSentimentValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStockAsset"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPartofFund"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#trackedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tracks"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tracksBond"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tracksStock"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/describesAspect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasAspect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isAboutAspect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isAboutCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/issuedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/issues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bajaj_bond_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#creates"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cuts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#deal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#debt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#decreased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ford"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ford_stock"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fund1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fund2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fund3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fund4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fund5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hcl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hcl_stock"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hyundai"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hyundai_stock"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#index1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#index2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#index3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#info2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#info3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#info4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#info5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#info6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#info7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#jobs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#loses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rises"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tcs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tcs_stock"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/bajaj"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/bajaj_stock"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/increased"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/info1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/profit"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#AtomicInstrument"/>
+        <ObjectUnionOf>
+            <Class IRI="/Bond"/>
+            <Class IRI="/Stock"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DebtFund"/>
+        <ObjectIntersectionOf>
+            <Class IRI="/MutualFund"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasInstrument"/>
+                <Class IRI="/Bond"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EquityFund"/>
+        <ObjectIntersectionOf>
+            <Class IRI="/MutualFund"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasInstrument"/>
+                <Class IRI="/Stock"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HybridFund"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasInstrument"/>
+                <Class IRI="/Bond"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasInstrument"/>
+                <Class IRI="/Stock"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NegativeCompany"/>
+        <ObjectIntersectionOf>
+            <Class IRI="/Company"/>
+            <ObjectSomeValuesFrom>
+                <ObjectInverseOf>
+                    <ObjectProperty IRI="/isAboutCompany"/>
+                </ObjectInverseOf>
+                <Class IRI="#NegativeInfo"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NegativeInfo"/>
+        <ObjectUnionOf>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="/describesAspect"/>
+                    <Class IRI="/Decrease"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="/isAboutAspect"/>
+                    <Class IRI="/PositiveAspect"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="/describesAspect"/>
+                    <Class IRI="/Increase"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="/isAboutAspect"/>
+                    <Class IRI="/NegativeAspect"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NegativeInstrument"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#AtomicInstrument"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/issuedBy"/>
+                <Class IRI="#NegativeCompany"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NegativeMutualFund"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInstrument"/>
+            <Class IRI="#NegativeInstrument"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NegativeStock"/>
+        <ObjectIntersectionOf>
+            <Class IRI="/Stock"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/issuedBy"/>
+                <Class IRI="#NegativeCompany"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PositiveCompany"/>
+        <ObjectIntersectionOf>
+            <Class IRI="/Company"/>
+            <ObjectSomeValuesFrom>
+                <ObjectInverseOf>
+                    <ObjectProperty IRI="/isAboutCompany"/>
+                </ObjectInverseOf>
+                <Class IRI="#PositiveInfo"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PositiveInfo"/>
+        <ObjectUnionOf>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="/describesAspect"/>
+                    <Class IRI="/Decrease"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="/isAboutAspect"/>
+                    <Class IRI="/NegativeAspect"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="/describesAspect"/>
+                    <Class IRI="/Increase"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="/isAboutAspect"/>
+                    <Class IRI="/PositiveAspect"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PositiveInstrument"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#AtomicInstrument"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/issuedBy"/>
+                <Class IRI="#PositiveCompany"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PositiveMutualFund"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInstrument"/>
+            <Class IRI="#PositiveInstrument"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PositiveStock"/>
+        <ObjectIntersectionOf>
+            <Class IRI="/Stock"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/issuedBy"/>
+                <Class IRI="#PositiveCompany"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#BondIndex"/>
+        <Class IRI="#MarketIndex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BondIndex"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#tracks"/>
+            <Class IRI="/Bond"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DebtFund"/>
+        <Class IRI="/MutualFund"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ETF"/>
+        <Class IRI="/MutualFund"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquityIndex"/>
+        <Class IRI="#MarketIndex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EquityIndex"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#tracks"/>
+            <Class IRI="/Stock"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MarketIndex"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#tracks"/>
+            <Class IRI="#AtomicInstrument"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Bond"/>
+        <Class IRI="/Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CompanyPart"/>
+        <Class IRI="/PositiveAspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Decrease"/>
+        <Class IRI="/Directionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DecreasingAction"/>
+        <Class IRI="/Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DecreasingAction"/>
+        <Class IRI="/Decrease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DecreasingProperty"/>
+        <Class IRI="/Decrease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DecreasingProperty"/>
+        <Class IRI="/Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Increase"/>
+        <Class IRI="/Directionality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/IncreasingAction"/>
+        <Class IRI="/Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/IncreasingAction"/>
+        <Class IRI="/Increase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/IncreasingProperty"/>
+        <Class IRI="/Increase"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/IncreasingProperty"/>
+        <Class IRI="/Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/MutualFund"/>
+        <Class IRI="/Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/NegativeAction"/>
+        <Class IRI="/Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/NegativeAction"/>
+        <Class IRI="/Negative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/NegativeAspect"/>
+        <Class IRI="/Aspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/NegativeProperty"/>
+        <Class IRI="/Negative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/NegativeProperty"/>
+        <Class IRI="/Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/PositiveAction"/>
+        <Class IRI="/Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/PositiveAction"/>
+        <Class IRI="/Positive"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/PositiveAspect"/>
+        <Class IRI="/Aspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/PositiveProperty"/>
+        <Class IRI="/Positive"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/PositiveProperty"/>
+        <Class IRI="/Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Stock"/>
+        <Class IRI="/Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Stock"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="/issuedBy"/>
+            <Class IRI="/Company"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectIntersectionOf>
+            <Class IRI="/Decrease"/>
+            <Class IRI="/NegativeAspect"/>
+        </ObjectIntersectionOf>
+        <Class IRI="/Positive"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectIntersectionOf>
+            <Class IRI="/Decrease"/>
+            <Class IRI="/PositiveAspect"/>
+        </ObjectIntersectionOf>
+        <Class IRI="/Negative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectIntersectionOf>
+            <Class IRI="/Increase"/>
+            <Class IRI="/NegativeAspect"/>
+        </ObjectIntersectionOf>
+        <Class IRI="/Negative"/>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectIntersectionOf>
+            <Class IRI="/Increase"/>
+            <Class IRI="/PositiveAspect"/>
+        </ObjectIntersectionOf>
+        <Class IRI="/Positive"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="/Bond"/>
+        <Class IRI="/MutualFund"/>
+        <Class IRI="/Stock"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/Decrease"/>
+        <Class IRI="/Increase"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/DecreasingAction"/>
+        <Class IRI="/DecreasingProperty"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/DecreasingAction"/>
+        <Class IRI="/IncreasingAction"/>
+        <Class IRI="/NegativeAction"/>
+        <Class IRI="/PositiveAction"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/DecreasingProperty"/>
+        <Class IRI="/IncreasingProperty"/>
+        <Class IRI="/NegativeProperty"/>
+        <Class IRI="/PositiveProperty"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/IncreasingAction"/>
+        <Class IRI="/IncreasingProperty"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/Negative"/>
+        <Class IRI="/Positive"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/NegativeAction"/>
+        <Class IRI="/NegativeProperty"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/NegativeAspect"/>
+        <Class IRI="/PositiveAspect"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/PositiveAction"/>
+        <Class IRI="/PositiveProperty"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="/Bond"/>
+        <NamedIndividual IRI="#bajaj_bond_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/IncreasingAction"/>
+        <NamedIndividual IRI="#creates"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/DecreasingAction"/>
+        <NamedIndividual IRI="#cuts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/PositiveAspect"/>
+        <NamedIndividual IRI="#deal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/NegativeAspect"/>
+        <NamedIndividual IRI="#debt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/DecreasingProperty"/>
+        <NamedIndividual IRI="#decreased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Company"/>
+        <NamedIndividual IRI="#ford"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Stock"/>
+        <NamedIndividual IRI="#ford_stock"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/MutualFund"/>
+        <NamedIndividual IRI="#fund3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/MutualFund"/>
+        <NamedIndividual IRI="#fund4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Company"/>
+        <NamedIndividual IRI="#hcl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Stock"/>
+        <NamedIndividual IRI="#hcl_stock"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Company"/>
+        <NamedIndividual IRI="#hyundai"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Stock"/>
+        <NamedIndividual IRI="#hyundai_stock"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Information"/>
+        <NamedIndividual IRI="#info2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Information"/>
+        <NamedIndividual IRI="#info3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Information"/>
+        <NamedIndividual IRI="#info4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Information"/>
+        <NamedIndividual IRI="#info5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Information"/>
+        <NamedIndividual IRI="#info6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Information"/>
+        <NamedIndividual IRI="#info7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/PositiveAspect"/>
+        <NamedIndividual IRI="#jobs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/DecreasingProperty"/>
+        <NamedIndividual IRI="#loses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/IncreasingProperty"/>
+        <NamedIndividual IRI="#rises"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Company"/>
+        <NamedIndividual IRI="#tcs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Stock"/>
+        <NamedIndividual IRI="#tcs_stock"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Company"/>
+        <NamedIndividual IRI="/bajaj"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Stock"/>
+        <NamedIndividual IRI="/bajaj_stock"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/IncreasingProperty"/>
+        <NamedIndividual IRI="/increased"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Information"/>
+        <NamedIndividual IRI="/info1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/PositiveAspect"/>
+        <NamedIndividual IRI="/profit"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#ford"/>
+        <NamedIndividual IRI="#hcl"/>
+        <NamedIndividual IRI="#hyundai"/>
+        <NamedIndividual IRI="#tcs"/>
+        <NamedIndividual IRI="/bajaj"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongTo"/>
+        <NamedIndividual IRI="#bajaj_bond_1"/>
+        <NamedIndividual IRI="/bajaj"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/issuedBy"/>
+        <NamedIndividual IRI="#ford_stock"/>
+        <NamedIndividual IRI="#ford"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStockAsset"/>
+        <NamedIndividual IRI="#fund1"/>
+        <NamedIndividual IRI="#hyundai_stock"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStockAsset"/>
+        <NamedIndividual IRI="#fund1"/>
+        <NamedIndividual IRI="#tcs_stock"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStockAsset"/>
+        <NamedIndividual IRI="#fund2"/>
+        <NamedIndividual IRI="#ford_stock"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStockAsset"/>
+        <NamedIndividual IRI="#fund2"/>
+        <NamedIndividual IRI="/bajaj_stock"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasBondAsset"/>
+        <NamedIndividual IRI="#fund3"/>
+        <NamedIndividual IRI="#bajaj_bond_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasBondAsset"/>
+        <NamedIndividual IRI="#fund4"/>
+        <NamedIndividual IRI="#bajaj_bond_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStockAsset"/>
+        <NamedIndividual IRI="#fund4"/>
+        <NamedIndividual IRI="#tcs_stock"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStockAsset"/>
+        <NamedIndividual IRI="#fund5"/>
+        <NamedIndividual IRI="#hyundai_stock"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasStockAsset"/>
+        <NamedIndividual IRI="#fund5"/>
+        <NamedIndividual IRI="#tcs_stock"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/issuedBy"/>
+        <NamedIndividual IRI="#hcl_stock"/>
+        <NamedIndividual IRI="#hcl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/issuedBy"/>
+        <NamedIndividual IRI="#hyundai_stock"/>
+        <NamedIndividual IRI="#hyundai"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tracksStock"/>
+        <NamedIndividual IRI="#index1"/>
+        <NamedIndividual IRI="#ford_stock"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tracksStock"/>
+        <NamedIndividual IRI="#index2"/>
+        <NamedIndividual IRI="#hyundai_stock"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tracksStock"/>
+        <NamedIndividual IRI="#index2"/>
+        <NamedIndividual IRI="#tcs_stock"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tracksBond"/>
+        <NamedIndividual IRI="#index3"/>
+        <NamedIndividual IRI="#bajaj_bond_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/describesAspect"/>
+        <NamedIndividual IRI="#info2"/>
+        <NamedIndividual IRI="/increased"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isAboutAspect"/>
+        <NamedIndividual IRI="#info2"/>
+        <NamedIndividual IRI="/profit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isAboutCompany"/>
+        <NamedIndividual IRI="#info2"/>
+        <NamedIndividual IRI="#hcl"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/describesAspect"/>
+        <NamedIndividual IRI="#info3"/>
+        <NamedIndividual IRI="#creates"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isAboutAspect"/>
+        <NamedIndividual IRI="#info3"/>
+        <NamedIndividual IRI="#jobs"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isAboutCompany"/>
+        <NamedIndividual IRI="#info3"/>
+        <NamedIndividual IRI="#tcs"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/describesAspect"/>
+        <NamedIndividual IRI="#info4"/>
+        <NamedIndividual IRI="#cuts"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isAboutAspect"/>
+        <NamedIndividual IRI="#info4"/>
+        <NamedIndividual IRI="#jobs"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isAboutCompany"/>
+        <NamedIndividual IRI="#info4"/>
+        <NamedIndividual IRI="#ford"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/describesAspect"/>
+        <NamedIndividual IRI="#info5"/>
+        <NamedIndividual IRI="#decreased"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isAboutAspect"/>
+        <NamedIndividual IRI="#info5"/>
+        <NamedIndividual IRI="#debt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isAboutCompany"/>
+        <NamedIndividual IRI="#info5"/>
+        <NamedIndividual IRI="#hyundai"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/describesAspect"/>
+        <NamedIndividual IRI="#info6"/>
+        <NamedIndividual IRI="#loses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isAboutAspect"/>
+        <NamedIndividual IRI="#info6"/>
+        <NamedIndividual IRI="#deal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isAboutCompany"/>
+        <NamedIndividual IRI="#info6"/>
+        <NamedIndividual IRI="/bajaj"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/issuedBy"/>
+        <NamedIndividual IRI="#tcs_stock"/>
+        <NamedIndividual IRI="#tcs"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/issuedBy"/>
+        <NamedIndividual IRI="/bajaj_stock"/>
+        <NamedIndividual IRI="/bajaj"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/describesAspect"/>
+        <NamedIndividual IRI="/info1"/>
+        <NamedIndividual IRI="#rises"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isAboutAspect"/>
+        <NamedIndividual IRI="/info1"/>
+        <NamedIndividual IRI="/profit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isAboutCompany"/>
+        <NamedIndividual IRI="/info1"/>
+        <NamedIndividual IRI="/bajaj"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBondAsset"/>
+        <ObjectProperty IRI="#hasInstrument"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasStockAsset"/>
+        <ObjectProperty IRI="#hasInstrument"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#tracksBond"/>
+        <ObjectProperty IRI="#tracks"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#tracksStock"/>
+        <ObjectProperty IRI="#tracks"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/hasPart"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasInstrument"/>
+        <ObjectProperty IRI="#isPartofFund"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#trackedBy"/>
+        <ObjectProperty IRI="#tracks"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/issuedBy"/>
+        <ObjectProperty IRI="/issues"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="/issuedBy"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="/issuedBy"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongTo"/>
+        <Class IRI="/Bond"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBondAsset"/>
+        <Class IRI="/MutualFund"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInstrument"/>
+        <Class IRI="/MutualFund"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSentimentValue"/>
+        <Class IRI="/Information"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStockAsset"/>
+        <Class IRI="/MutualFund"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tracks"/>
+        <Class IRI="#MarketIndex"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tracksBond"/>
+        <Class IRI="#BondIndex"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tracksStock"/>
+        <Class IRI="#EquityIndex"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/describesAspect"/>
+        <Class IRI="/Information"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasAspect"/>
+        <Class IRI="/Company"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasPart"/>
+        <Class IRI="/Company"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isAboutAspect"/>
+        <Class IRI="/Information"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isAboutCompany"/>
+        <Class IRI="/Information"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/issuedBy"/>
+        <Class IRI="#AtomicInstrument"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongTo"/>
+        <Class IRI="/Company"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBondAsset"/>
+        <Class IRI="/Bond"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInstrument"/>
+        <Class IRI="/Instrument"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStockAsset"/>
+        <Class IRI="/Stock"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tracks"/>
+        <Class IRI="#AtomicInstrument"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tracksBond"/>
+        <Class IRI="/Bond"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tracksStock"/>
+        <Class IRI="/Stock"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/describesAspect"/>
+        <Class IRI="/Directionality"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasAspect"/>
+        <Class IRI="/Aspect"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasPart"/>
+        <Class IRI="/CompanyPart"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isAboutAspect"/>
+        <Class IRI="/Aspect"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isAboutCompany"/>
+        <Class IRI="/Company"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/issuedBy"/>
+        <Class IRI="/Company"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/issues"/>
+        <Class IRI="#AtomicInstrument"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#hasBondAsset"/>
+        <ObjectProperty IRI="#hasStockAsset"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#tracksBond"/>
+        <ObjectProperty IRI="#tracksStock"/>
+    </DisjointObjectProperties>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#fund1</IRI>
+        <Literal>an Equity fund</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#fund2</IRI>
+        <Literal>an Equity fund</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#fund3</IRI>
+        <Literal>a debt fund</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#fund4</IRI>
+        <Literal>a Hybrid fund</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#fund5</IRI>
+        <Literal>an etf fund</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#index3</IRI>
+        <Literal>bond index sample</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#info2</IRI>
+        <Literal>HCL reported a 19.5% increase in net profit, reaching ₹98 crore, thanks to strong operational performance​
+Pulse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#info3</IRI>
+        <Literal>&quot;TCS unveils major plan to create 50,000 jobs in India.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#info4</IRI>
+        <Literal>Ford cuts  jobs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#info5</IRI>
+        <Literal>Hyundai decreases debt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#info6</IRI>
+        <Literal>Bajaj loses deal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Action</IRI>
+        <Literal>representing verbs in the text.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Aspect</IRI>
+        <Literal>modeling nouns that represent entities like companies or aspects of entities
+like profit and debt,</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Information</IRI>
+        <Literal>any information regarding company in the form of triplet containing company name. aspect of the company and the directionality of the aspect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Instrument</IRI>
+        <Literal>Instruments are are things which a person can invest into</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/NegativeAction</IRI>
+        <Literal>eg. loses lawsuit,launches new product</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/NegativeAspect</IRI>
+        <Literal>negatively oriented entities for which a ‘down’ or ‘decrease’ movement is positive (e.g., debt).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/PositiveAspect</IRI>
+        <Literal>consist of positively oriented entities for which an ‘up’ or ‘increase’ movement is positive (e.g., profit).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/Property</IRI>
+        <Literal>modeling adjectives like lower, better, etc.,</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/info1</IRI>
+        <Literal>&quot;Bajaj Auto posts 9% rise in Q2 profits, driven by robust domestic sales.&quot;</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
