@@ -1,0 +1,866 @@
+@prefix : <http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#> .
+@prefix fm: <http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#> .
+
+<http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling> rdf:type owl:Ontology ;
+                                                                             rdfs:comment "Financial modelling concerned with stocks, mutual funds and financial information" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#belongTo
+:belongTo rdf:type owl:ObjectProperty ;
+          rdfs:domain fm:Bond ;
+          rdfs:range fm:Company .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasBondAsset
+:hasBondAsset rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasInstrument ;
+              rdfs:domain fm:MutualFund ;
+              rdfs:range fm:Bond ;
+              owl:propertyDisjointWith :hasStockAsset .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasInstrument
+:hasInstrument rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isPartofFund ;
+               rdfs:domain fm:MutualFund ;
+               rdfs:range fm:Instrument .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasSentimentValue
+:hasSentimentValue rdf:type owl:ObjectProperty ;
+                   rdfs:domain fm:Information .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasStockAsset
+:hasStockAsset rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :hasInstrument ;
+               rdfs:domain fm:MutualFund ;
+               rdfs:range fm:Stock .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#isPartofFund
+:isPartofFund rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#trackedBy
+:trackedBy rdf:type owl:ObjectProperty ;
+           owl:inverseOf :tracks .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tracks
+:tracks rdf:type owl:ObjectProperty ;
+        rdfs:domain :MarketIndex ;
+        rdfs:range :AtomicInstrument .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tracksBond
+:tracksBond rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :tracks ;
+            rdfs:domain :BondIndex ;
+            rdfs:range fm:Bond ;
+            owl:propertyDisjointWith :tracksStock .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tracksStock
+:tracksStock rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :tracks ;
+             rdfs:domain :EquityIndex ;
+             rdfs:range fm:Stock .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/describesAspect
+fm:describesAspect rdf:type owl:ObjectProperty ;
+                   rdfs:domain fm:Information ;
+                   rdfs:range fm:Directionality .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/hasAspect
+fm:hasAspect rdf:type owl:ObjectProperty ;
+             rdfs:domain fm:Company ;
+             rdfs:range fm:Aspect .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/hasPart
+fm:hasPart rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain fm:Company ;
+           rdfs:range fm:CompanyPart .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/isAboutAspect
+fm:isAboutAspect rdf:type owl:ObjectProperty ;
+                 rdfs:domain fm:Information ;
+                 rdfs:range fm:Aspect .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/isAboutCompany
+fm:isAboutCompany rdf:type owl:ObjectProperty ;
+                  rdfs:domain fm:Information ;
+                  rdfs:range fm:Company .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/issuedBy
+fm:issuedBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf fm:issues ;
+            rdf:type owl:FunctionalProperty ,
+                     owl:InverseFunctionalProperty ;
+            rdfs:domain :AtomicInstrument ;
+            rdfs:range fm:Company .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/issues
+fm:issues rdf:type owl:ObjectProperty ;
+          rdfs:range :AtomicInstrument .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#AtomicInstrument
+:AtomicInstrument rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Class ;
+                                        owl:unionOf ( fm:Bond
+                                                      fm:Stock
+                                                    )
+                                      ] .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#BondIndex
+:BondIndex rdf:type owl:Class ;
+           rdfs:subClassOf :MarketIndex ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :tracks ;
+                             owl:allValuesFrom fm:Bond
+                           ] .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Branch
+:Branch rdf:type owl:Class ;
+        rdfs:subClassOf fm:CompanyPart .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#DebtFund
+:DebtFund rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( fm:MutualFund
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasInstrument ;
+                                                       owl:someValuesFrom fm:Bond
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+          rdfs:subClassOf fm:MutualFund .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#EquityFund
+:EquityFund rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( fm:MutualFund
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :hasInstrument ;
+                                                         owl:someValuesFrom fm:Stock
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#EquityIndex
+:EquityIndex rdf:type owl:Class ;
+             rdfs:subClassOf :MarketIndex ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :tracks ;
+                               owl:allValuesFrom fm:Stock
+                             ] .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#HybridFund
+:HybridFund rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :hasBondAsset ;
+                                                         owl:someValuesFrom owl:Thing
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :hasStockAsset ;
+                                                         owl:someValuesFrom owl:Thing
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:subClassOf fm:MutualFund .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MarketIndex
+:MarketIndex rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :tracks ;
+                               owl:allValuesFrom :AtomicInstrument
+                             ] .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeCompany
+:NegativeCompany rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( fm:Company
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty [ owl:inverseOf fm:isAboutCompany
+                                                                             ] ;
+                                                              owl:someValuesFrom :NegativeInfo
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf [ owl:intersectionOf ( fm:Company
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty [ owl:inverseOf fm:isAboutCompany
+                                                                         ] ;
+                                                          owl:someValuesFrom :NegativeInfo
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInfo
+:NegativeInfo rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty fm:describesAspect ;
+                                                                           owl:someValuesFrom fm:Decrease
+                                                                         ]
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty fm:isAboutAspect ;
+                                                                           owl:someValuesFrom fm:PositiveAspect
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ]
+                                                  [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty fm:describesAspect ;
+                                                                           owl:someValuesFrom fm:Increase
+                                                                         ]
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty fm:isAboutAspect ;
+                                                                           owl:someValuesFrom fm:NegativeAspect
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty fm:describesAspect ;
+                                                    owl:someValuesFrom fm:NegativeAction
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty fm:describesAspect ;
+                                                    owl:someValuesFrom fm:NegativeProperty
+                                                  ]
+                                                )
+                                  ] ;
+              rdfs:subClassOf fm:Information ;
+              owl:disjointWith :PositiveInfo .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInstrument
+:NegativeInstrument rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( :AtomicInstrument
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty fm:issuedBy ;
+                                                                 owl:someValuesFrom :NegativeCompany
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeMutualFund
+:NegativeMutualFund rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasInstrument ;
+                                          owl:someValuesFrom :NegativeInstrument
+                                        ] ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasInstrument ;
+                                      owl:someValuesFrom :NegativeInstrument
+                                    ] .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeStock
+:NegativeStock rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( fm:Stock
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty fm:issuedBy ;
+                                                            owl:someValuesFrom :NegativeCompany
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveCompany
+:PositiveCompany rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( fm:Company
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty [ owl:inverseOf fm:isAboutCompany
+                                                                             ] ;
+                                                              owl:someValuesFrom :PositiveInfo
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf fm:Company .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInfo
+:PositiveInfo rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty fm:describesAspect ;
+                                                                           owl:someValuesFrom fm:Decrease
+                                                                         ]
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty fm:isAboutAspect ;
+                                                                           owl:someValuesFrom fm:NegativeAspect
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ]
+                                                  [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty fm:describesAspect ;
+                                                                           owl:someValuesFrom fm:Increase
+                                                                         ]
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty fm:isAboutAspect ;
+                                                                           owl:someValuesFrom fm:PositiveAspect
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty fm:describesAspect ;
+                                                    owl:someValuesFrom fm:PositiveAction
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty fm:describesAspect ;
+                                                    owl:someValuesFrom fm:PositiveProperty
+                                                  ]
+                                                )
+                                  ] ;
+              rdfs:subClassOf fm:Information .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInstrument
+:PositiveInstrument rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( :AtomicInstrument
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty fm:issuedBy ;
+                                                                 owl:someValuesFrom :PositiveCompany
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveMutualFund
+:PositiveMutualFund rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasInstrument ;
+                                          owl:someValuesFrom :PositiveInstrument
+                                        ] ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasInstrument ;
+                                      owl:someValuesFrom :PositiveInstrument
+                                    ] .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveStock
+:PositiveStock rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( fm:Stock
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty fm:issuedBy ;
+                                                            owl:someValuesFrom :PositiveCompany
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Store
+:Store rdf:type owl:Class ;
+       rdfs:subClassOf fm:CompanyPart .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Subsidary
+:Subsidary rdf:type owl:Class ;
+           rdfs:subClassOf fm:CompanyPart .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Action
+fm:Action rdf:type owl:Class ;
+          rdfs:comment "representing verbs in the text." .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Aspect
+fm:Aspect rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Class ;
+                                owl:unionOf ( fm:NegativeAspect
+                                              fm:PositiveAspect
+                                            )
+                              ] ;
+          rdfs:comment """modeling nouns that represent entities like companies or aspects of entities
+like profit and debt,""" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Bond
+fm:Bond rdf:type owl:Class ;
+        rdfs:subClassOf fm:Instrument ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty fm:issuedBy ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass fm:Company
+                        ] .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Company
+fm:Company rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/CompanyPart
+fm:CompanyPart rdf:type owl:Class ;
+               rdfs:subClassOf fm:PositiveAspect .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Decrease
+fm:Decrease rdf:type owl:Class ;
+            rdfs:subClassOf fm:Directionality ;
+            owl:disjointWith fm:Increase .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/DecreasingAction
+fm:DecreasingAction rdf:type owl:Class ;
+                    rdfs:subClassOf fm:Action ,
+                                    fm:Decrease ;
+                    owl:disjointWith fm:DecreasingProperty .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/DecreasingProperty
+fm:DecreasingProperty rdf:type owl:Class ;
+                      rdfs:subClassOf fm:Decrease ,
+                                      fm:Property .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Directionality
+fm:Directionality rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Class ;
+                                        owl:unionOf ( fm:Decrease
+                                                      fm:Increase
+                                                    )
+                                      ] .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Increase
+fm:Increase rdf:type owl:Class ;
+            rdfs:subClassOf fm:Directionality .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/IncreasingAction
+fm:IncreasingAction rdf:type owl:Class ;
+                    rdfs:subClassOf fm:Action ,
+                                    fm:Increase ;
+                    owl:disjointWith fm:IncreasingProperty .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/IncreasingProperty
+fm:IncreasingProperty rdf:type owl:Class ;
+                      rdfs:subClassOf fm:Increase ,
+                                      fm:Property .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Information
+fm:Information rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:unionOf ( :NegativeInfo
+                                                   :PositiveInfo
+                                                 )
+                                   ] ;
+               rdfs:comment "any information regarding company in the form of triplet containing company name. aspect of the company and the directionality of the aspect" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Instrument
+fm:Instrument rdf:type owl:Class ;
+              rdfs:comment "Instruments are are things which a person can invest into" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/MutualFund
+fm:MutualFund rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:unionOf ( :DebtFund
+                                                  :EquityFund
+                                                  :HybridFund
+                                                )
+                                  ] ;
+              rdfs:subClassOf fm:Instrument .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Negative
+fm:Negative rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/NegativeAction
+fm:NegativeAction rdf:type owl:Class ;
+                  rdfs:subClassOf fm:Action ,
+                                  fm:Negative ;
+                  owl:disjointWith fm:NegativeProperty ;
+                  rdfs:comment "eg. loses lawsuit,launches new product" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/NegativeAspect
+fm:NegativeAspect rdf:type owl:Class ;
+                  rdfs:subClassOf fm:Aspect ;
+                  owl:disjointWith fm:PositiveAspect ;
+                  rdfs:comment "negatively oriented entities for which a ‘down’ or ‘decrease’ movement is positive (e.g., debt)." .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/NegativeProperty
+fm:NegativeProperty rdf:type owl:Class ;
+                    rdfs:subClassOf fm:Negative ,
+                                    fm:Property .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Positive
+fm:Positive rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/PositiveAction
+fm:PositiveAction rdf:type owl:Class ;
+                  rdfs:subClassOf fm:Action ,
+                                  fm:Positive ;
+                  owl:disjointWith fm:PositiveProperty .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/PositiveAspect
+fm:PositiveAspect rdf:type owl:Class ;
+                  rdfs:subClassOf fm:Aspect ;
+                  rdfs:comment "consist of positively oriented entities for which an ‘up’ or ‘increase’ movement is positive (e.g., profit)." .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/PositiveProperty
+fm:PositiveProperty rdf:type owl:Class ;
+                    rdfs:subClassOf fm:Positive ,
+                                    fm:Property .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Property
+fm:Property rdf:type owl:Class ;
+            rdfs:comment "modeling adjectives like lower, better, etc.," .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Stock
+fm:Stock rdf:type owl:Class ;
+         rdfs:subClassOf fm:CompanyPart ,
+                         fm:Instrument ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty fm:issuedBy ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass fm:Company
+                         ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#bajaj_bond_1
+:bajaj_bond_1 rdf:type owl:NamedIndividual ,
+                       fm:Bond ;
+              :belongTo fm:bajaj .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#creates
+:creates rdf:type owl:NamedIndividual ,
+                  fm:IncreasingAction .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#cuts
+:cuts rdf:type owl:NamedIndividual ,
+               fm:DecreasingAction .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#deal
+:deal rdf:type owl:NamedIndividual ,
+               fm:PositiveAspect .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#debt
+:debt rdf:type owl:NamedIndividual ,
+               fm:NegativeAspect .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#decreased
+:decreased rdf:type owl:NamedIndividual ,
+                    fm:DecreasingProperty .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#ford
+:ford rdf:type owl:NamedIndividual ,
+               fm:Company .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#ford_stock
+:ford_stock rdf:type owl:NamedIndividual ,
+                     fm:Stock ;
+            fm:issuedBy :ford .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#fund1
+:fund1 rdf:type owl:NamedIndividual ;
+       :hasStockAsset :hyundai_stock ,
+                      :tcs_stock ;
+       rdfs:comment "an Equity fund" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#fund2
+:fund2 rdf:type owl:NamedIndividual ;
+       :hasStockAsset :ford_stock ,
+                      fm:bajaj_stock ;
+       rdfs:comment "an Equity fund" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#fund3
+:fund3 rdf:type owl:NamedIndividual ,
+                fm:MutualFund ;
+       :hasBondAsset :bajaj_bond_1 ;
+       rdfs:comment "a debt fund" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#fund4
+:fund4 rdf:type owl:NamedIndividual ,
+                fm:MutualFund ;
+       :hasBondAsset :bajaj_bond_1 ;
+       :hasStockAsset :tcs_stock ;
+       rdfs:comment "a Hybrid fund" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#fund5
+:fund5 rdf:type owl:NamedIndividual ;
+       :hasStockAsset :hyundai_stock ,
+                      :tcs_stock ;
+       rdfs:comment "an etf fund" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hcl
+:hcl rdf:type owl:NamedIndividual ,
+              fm:Company .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hcl_stock
+:hcl_stock rdf:type owl:NamedIndividual ,
+                    fm:Stock ;
+           fm:issuedBy :hcl .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hyundai
+:hyundai rdf:type owl:NamedIndividual ,
+                  fm:Company .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hyundai_stock
+:hyundai_stock rdf:type owl:NamedIndividual ,
+                        fm:Stock ;
+               fm:issuedBy :hyundai .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#index1
+:index1 rdf:type owl:NamedIndividual ;
+        :tracksStock :ford_stock .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#index2
+:index2 rdf:type owl:NamedIndividual ;
+        :tracksStock :hyundai_stock ,
+                     :tcs_stock .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#index3
+:index3 rdf:type owl:NamedIndividual ;
+        :tracksBond :bajaj_bond_1 ;
+        rdfs:comment "bond index sample" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info2
+:info2 rdf:type owl:NamedIndividual ,
+                fm:Information ;
+       fm:describesAspect fm:increased ;
+       fm:isAboutAspect fm:profit ;
+       fm:isAboutCompany :hcl ;
+       rdfs:comment """HCL reported a 19.5% increase in net profit, reaching ₹98 crore, thanks to strong operational performance​
+Pulse""" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info3
+:info3 rdf:type owl:NamedIndividual ,
+                fm:Information ;
+       fm:describesAspect :creates ;
+       fm:isAboutAspect :jobs ;
+       fm:isAboutCompany :tcs ;
+       rdfs:comment "\"TCS unveils major plan to create 50,000 jobs in India.\"" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info4
+:info4 rdf:type owl:NamedIndividual ,
+                fm:Information ;
+       fm:describesAspect :cuts ;
+       fm:isAboutAspect :jobs ;
+       fm:isAboutCompany :ford ;
+       rdfs:comment "Ford cuts  jobs" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info5
+:info5 rdf:type owl:NamedIndividual ,
+                fm:Information ;
+       fm:describesAspect :decreased ;
+       fm:isAboutAspect :debt ;
+       fm:isAboutCompany :hyundai ;
+       rdfs:comment "Hyundai decreases debt" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info6
+:info6 rdf:type owl:NamedIndividual ,
+                fm:Information ;
+       fm:describesAspect :loses ;
+       fm:isAboutAspect :deal ;
+       fm:isAboutCompany fm:bajaj ;
+       rdfs:comment "Bajaj loses deal" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info7
+:info7 rdf:type owl:NamedIndividual ,
+                fm:Information .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info8
+:info8 rdf:type owl:NamedIndividual ;
+       fm:describesAspect :underperforming ;
+       fm:isAboutAspect :subsidary ;
+       fm:isAboutCompany :tata_motors .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#jobs
+:jobs rdf:type owl:NamedIndividual ,
+               fm:PositiveAspect .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#loses
+:loses rdf:type owl:NamedIndividual ,
+                fm:DecreasingProperty .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#rises
+:rises rdf:type owl:NamedIndividual ,
+                fm:IncreasingProperty .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#subsidary
+:subsidary rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tata_motors
+:tata_motors rdf:type owl:NamedIndividual ,
+                      fm:Company ;
+             fm:hasPart :subsidary .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tcs
+:tcs rdf:type owl:NamedIndividual ,
+              fm:Company .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tcs_stock
+:tcs_stock rdf:type owl:NamedIndividual ,
+                    fm:Stock ;
+           fm:issuedBy :tcs .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#underperforming
+:underperforming rdf:type owl:NamedIndividual ,
+                          fm:NegativeProperty .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/bajaj
+fm:bajaj rdf:type owl:NamedIndividual ,
+                  fm:Company .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/bajaj_stock
+fm:bajaj_stock rdf:type owl:NamedIndividual ,
+                        fm:Stock ;
+               fm:issuedBy fm:bajaj .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/increased
+fm:increased rdf:type owl:NamedIndividual ,
+                      fm:IncreasingProperty .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/info1
+fm:info1 rdf:type owl:NamedIndividual ,
+                  fm:Information ;
+         fm:describesAspect :rises ;
+         fm:isAboutAspect fm:profit ;
+         fm:isAboutCompany fm:bajaj ;
+         rdfs:comment "\"Bajaj Auto posts 9% rise in Q2 profits, driven by robust domestic sales.\"" .
+
+
+###  http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/profit
+fm:profit rdf:type owl:NamedIndividual ,
+                   fm:PositiveAspect .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( fm:Bond
+                fm:MutualFund
+                fm:Stock
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( fm:DecreasingAction
+                fm:IncreasingAction
+                fm:NegativeAction
+                fm:PositiveAction
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( fm:DecreasingProperty
+                fm:IncreasingProperty
+                fm:NegativeProperty
+                fm:PositiveProperty
+              )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :ford
+                        :hcl
+                        :hyundai
+                        :tcs
+                        fm:bajaj
+                      )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
